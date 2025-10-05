@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+
+{% block title %}Inxource - Turn Data into your fastest competitive advantage{% endblock %}
+
+{% block content %}
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Turn Data into your fastest competitive advantage.</h1>
+        <p><strong>Information is your moat. Speed is your edge.</strong></p>
+        <p>Inxource helps businesses of every size unlock the full value of their data. Whether you're running a fast-moving shop or leading a large-scale operation, we help you turn information into action at the speed of your decisions.</p>
+        <button class="cta-btn" onclick="window.open('{{ inxource_dashboard }}', '_blank')">Get Started</button>
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/inxource login_PhotoGrid.png') }}" alt="Inxource Dashboard Preview">
+        <div class="carousel-dots">
+            <!--<span class="dot active"></span>-->
+            <!--<span class="dot"></span>-->
+        </div>
+    </div>
+</section>
+
+<section id="features" class="features-grid">
+    <div class="feature-card">
+        <div class="feature-header">
+            <span class="feature-badge">✓</span>
+            <span>Feature</span>
+        </div>
+        <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </div>
+        <h3>Stay organized with a clear business dashboard</h3>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-header">
+            <span class="feature-badge">✓</span>
+            <span>Feature</span>
+        </div>
+        <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        </div>
+        <h3>Track sales and customers in real time</h3>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-header">
+            <span class="feature-badge">✓</span>
+            <span>Feature</span>
+        </div>
+        <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Automate manual workflows with one click</h3>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-header">
+            <span class="feature-badge">✓</span>
+            <span>Feature</span>
+        </div>
+        <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <h3>Spot patterns and opportunities faster</h3>
+    </div>
+</section>
+
+<section class="how-it-works">
+    <h2>How it works</h2>
+    <p class="subtitle">Affordable, predictable, built for growth.</p>
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Connect your business in one place</h3>
+            <h5>Bring all your sales and customer data together seamlessly.</h5>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Discover insights instantly</h3>
+            <h5>See patterns, trends, and opportunities in minutes.</h5>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Automate and grow effortlessly</h3>
+            <h5>Streamline daily tasks and focus on scaling your business.</h5>
+        </div>
+    </div>
+</section>
+
+<section class="why-choose">
+    <h2>Why choose Inxource</h2>
+    <p class="subtitle">Automation, Organization, Growth.</p>
+    <div class="discovery-items">
+        <div class="discovery-item">
+            <div class="discovery-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <div>
+                <h4>Automation</h4>
+                <p>We automate your order process so you can simply view all customer purchases in your dashboard without manual intervention.</p>
+            </div>
+        </div>
+        <div class="discovery-item">
+            <div class="discovery-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <div>
+                <h4>Organization</h4>
+                <p>We give you a clear view of your sales, customers, and repeat buyers so you can stay on top of your business with ease.</p>
+            </div>
+        </div>
+        <div class="discovery-item">
+            <div class="discovery-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <div>
+                <h4>Growth</h4>
+                <p>Our Lenny AI Assistant acts as your business advisor, analyzing patterns and seasons in your sales and guiding you on how to move forward strategically.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-slider">
+        <div class="slider-arrows">
+            <button class="arrow">‹</button>
+            <button class="arrow">›</button>
+        </div>
+        <div class="testimonial-card">
+            <div class="stars">★ ★ ★ ★ ☆</div>
+            <p class="testimonial-text">" Lorem ipsum dolor sit amet, consectetur. A pellentesque quis urna nunc. Pellentesque consilis et et nunc. Mauris donec auctor eget magna sed viverra vel commodo viverra massa vel."</p>
+            <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <h5>Name of person</h5>
+                    <p>Title · Company</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+        </div>
+    </div>
+</section>
+
+<section id="pricing" class="pricing">
+    <h2>Pricing Plans</h2>
+    <p class="subtitle">Affordable, predictable, built for growth.</p>
+    <div class="pricing-cards">
+        <div class="pricing-card">
+            <div class="plan-name">Starter Plan</div>
+            <p class="plan-desc">Best suited for Sole-proprietors</p>
+            <div class="price">$10</div>
+            <div class="price-period">/month</div>
+            <button class="get-started-btn">Get Started</button>
+        </div>
+        <div class="pricing-card">
+            <div class="plan-name">Growth Plan</div>
+            <p class="plan-desc">Best suited for SMEs and Startups</p>
+            <div class="price">$15</div>
+            <div class="price-period">/month</div>
+            <button class="get-started-btn">Get Started</button>
+        </div>
+        <div class="pricing-card">
+            <div class="plan-name">Pro plan</div>
+            <p class="plan-desc">Best suited for big Enterprises</p>
+            <div class="price">---</div>
+            <div class="price-period">/month</div>
+            <button class="get-started-btn">Get Started</button>
+        </div>
+    </div>
+</section>
+
+<section id="faqs" class="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <p class="subtitle">Everything you need to know about Inxource</p>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>What is Inxource?</h4>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Inxource is a business intelligence platform that helps you turn your data into actionable insights. We automate your order processing, organize your customer data, and provide AI-powered analytics to help you make better business decisions.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>How does the automation work?</h4>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Our platform automatically syncs with your sales channels and processes orders in real-time. All customer purchases are instantly reflected in your dashboard without any manual data entry required.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>What is Lenny AI Assistant?</h4>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lenny is our AI-powered business advisor that analyzes your sales patterns, identifies seasonal trends, and provides strategic recommendations to help you grow your business more effectively.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Can I switch plans later?</h4>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes! You can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle, and we'll prorate any differences.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Is my data secure?</h4>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Absolutely. We use bank-level encryption to protect your data and follow industry best practices for security. Your business information is stored securely and never shared with third parties.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Do you offer customer support?</h4>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes! All plans include email support. Growth and Pro plans also get priority support with faster response times. Our team is here to help you succeed.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
