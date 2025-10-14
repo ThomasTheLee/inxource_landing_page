@@ -696,6 +696,15 @@
                     <li><a href="{{ url_for('index') }}#pricing" class="nav-link">Pricing</a></li>
                     <li><a href="{{ url_for('index') }}#faqs" class="nav-link">FAQs</a></li>
                     {% endif %}
+                    {% if active_tab == 'enterprise' %}
+                    <li>
+                      <button class="login-btn"
+                              style="color: #fff; background: #000; border: none; cursor: pointer;"
+                              onclick="document.getElementById('contactModal').classList.add('active'); document.body.style.overflow='hidden';">
+                        Contact Us
+                      </button>
+                    </li>
+                    {% else %}
                     <li>
                       <a href="{{ inxource_dashboard }}"
                          class="login-btn"
@@ -705,6 +714,8 @@
                         Login
                       </a>
                     </li>
+                    {% endif %}
+
                 </ul>
             </nav>
 
