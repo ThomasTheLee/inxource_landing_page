@@ -1,10 +1,13 @@
 steps:
+  # Build Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/inxource-website', '.']
 
+  # Push Docker image to Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/inxource-website']
 
+  # Deploy to Cloud Run in the specific region
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
     args:
@@ -14,7 +17,7 @@ steps:
       - '--image'
       - 'gcr.io/$PROJECT_ID/inxource-website'
       - '--region'
-      - 'us-central1'       # <- changed region
+      - 'us-central1'        # <- specify your region here
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
