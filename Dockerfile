@@ -18,4 +18,4 @@ ENV FLASK_APP=main.py
 EXPOSE 8080
 
 # Command to run the app using Gunicorn (production-ready)
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "main:app"]
+CMD ["python", "main.py"]
