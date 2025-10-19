@@ -50,9 +50,28 @@
             font-weight: 700;
             display: flex;
             align-items: center;
+            gap: 15px;
         }
 
         .logo span {
+            color: #000;
+        }
+
+        .logo-guide {
+            font-size: 12px;
+            color: #999;
+            border-left: 1px solid #ddd;
+            padding-left: 15px;
+            display: none;
+        }
+
+        .logo-guide a {
+            text-decoration: none;
+            color: #999;
+            transition: color 0.3s ease;
+        }
+
+        .logo-guide a:hover {
             color: #000;
         }
 
@@ -67,6 +86,14 @@
             text-decoration: none;
             color: #1a1a1a;
             font-size: 14px;
+        }
+
+        .nav-links .guide-link {
+            display: none;
+        }
+
+        .nav-links .guide-link.show {
+            display: block;
         }
 
         .login-btn {
@@ -601,76 +628,82 @@
             .cta-form {
                 flex-direction: column;
             }
+
+            /* Mobile: Show guide link beside logo */
+            .logo-guide {
+                display: block;
+            }
         }
+
         /* FAQs */
-.faqs {
-    text-align: center;
-    margin-bottom: 80px;
-}
+        .faqs {
+            text-align: center;
+            margin-bottom: 80px;
+        }
 
-.faqs h2 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
+        .faqs h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
 
-.faqs .subtitle {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 40px;
-}
+        .faqs .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
 
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
 
-.faq-item {
-    border-bottom: 1px solid #eee;
-    padding: 20px 0;
-}
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
 
-.faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    user-select: none;
-}
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
 
-.faq-question h4 {
-    font-size: 16px;
-    font-weight: 600;
-}
+        .faq-question h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
 
-.faq-toggle {
-    font-size: 24px;
-    font-weight: 300;
-    color: #666;
-    transition: transform 0.3s ease;
-}
+        .faq-toggle {
+            font-size: 24px;
+            font-weight: 300;
+            color: #666;
+            transition: transform 0.3s ease;
+        }
 
-.faq-item.active .faq-toggle {
-    transform: rotate(45deg);
-}
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
 
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-}
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
 
-.faq-item.active .faq-answer {
-    max-height: 200px;
-    padding-top: 15px;
-}
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-top: 15px;
+        }
 
-.faq-answer p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-}
+        .faq-answer p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
 
         {% block extra_css %}{% endblock %}
     </style>
@@ -680,7 +713,10 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <span>In✕ource</span>
+                    <span>Inxource</span>
+                    <div class="logo-guide">
+                        <a href="{{ url_for('user_guide') }}">User Guide</a>
+                    </div>
                 </div>
                 <ul class="nav-links">
                     {% if active_tab == 'enterprise' %}
@@ -696,15 +732,11 @@
                     <li><a href="{{ url_for('index') }}#pricing" class="nav-link">Pricing</a></li>
                     <li><a href="{{ url_for('index') }}#faqs" class="nav-link">FAQs</a></li>
                     {% endif %}
-                    {% if active_tab == 'enterprise' %}
+                    {% if active_tab == 'sme' %}
                     <li>
-                      <button class="login-btn"
-                              style="color: #fff; background: #000; border: none; cursor: pointer;"
-                              onclick="document.getElementById('contactModal').classList.add('active'); document.body.style.overflow='hidden';">
-                        Contact Us
-                      </button>
+                        <a href="{{ url_for('user_guide') }}" class="nav-link guide-link show">User Guide</a>
                     </li>
-                    {% else %}
+                    {% endif %}
                     <li>
                       <a href="{{ inxource_dashboard }}"
                          class="login-btn"
@@ -714,8 +746,6 @@
                         Login
                       </a>
                     </li>
-                    {% endif %}
-
                 </ul>
             </nav>
 
@@ -742,7 +772,7 @@
     {% block footer %}
     <section class="cta-section">
         <div class="container">
-            <h2>“Join our community to be the first to test new features<br>and share your ideas directly with our team.”</h2>
+            <h2>"Join our community to be the first to test new features<br>and share your ideas directly with our team."</h2>
             <form class="cta-form">
                 <!--<input type="email" class="cta-input" placeholder="Enter your mobile">-->
                 <button type="button" class="cta-submit" onclick="window.open('{{ whatsapp_link }}', '_blank')">
