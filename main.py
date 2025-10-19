@@ -26,6 +26,10 @@ def index():
 def enterprise():
     return render_template('enterprise.html', active_tab='enterprise')
 
+@app.route('/user_guide')
+def user_guide():
+    return render_template('user_guide.html')
+
 @app.route('/send_mail', methods=['POST'])
 def send_mail():
     """Sends a self email from the user to Inxource email"""
