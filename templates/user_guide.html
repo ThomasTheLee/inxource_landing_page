@@ -1,415 +1,154 @@
 {% extends "base.html" %}
 
-{% block title %}Inxource - Turn Data into your fastest competitive advantage{% endblock %}
+{% block title %}Inxource - Your Complete Business Companion{% endblock %}
 
 {% block content %}
-<head>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #fff;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: #000;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 18px;
-            color: #ccc;
-        }
-
-        /* Section Container */
-        .guide-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            padding: 80px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .guide-section.reverse {
-            direction: rtl;
-        }
-
-        .guide-section.reverse > * {
-            direction: ltr;
-        }
-
-        .section-content {
-            padding: 20px 0;
-        }
-
-        .section-number {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #000;
-            color: #fff;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-
-        .section-content h2 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            line-height: 1.3;
-        }
-
-        .section-content p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-        .section-content ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        .section-content li {
-            font-size: 15px;
-            color: #666;
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .section-image {
-            background: #f5f5f5;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            min-height: 350px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .section-image img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .placeholder-image {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        /* Features Section */
-        .features-highlight {
-            background: #f9f9f9;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .features-highlight h2 {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 50px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .feature-box {
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .feature-box h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .feature-box p {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: #000;
-            border-radius: 8px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 28px;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: #000;
-            color: #fff;
-            padding: 60px 0;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .cta-section h2 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .cta-btn {
-            background: #fff;
-            color: #000;
-            padding: 14px 32px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        .cta-btn:hover {
-            background: #f0f0f0;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 28px;
-            }
-
-            .guide-section {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding: 50px 0;
-            }
-
-            .guide-section.reverse {
-                direction: ltr;
-            }
-
-            .section-content h2 {
-                font-size: 22px;
-            }
-
-            .section-content p {
-                font-size: 15px;
-            }
-
-            .section-image {
-                min-height: 250px;
-                padding: 20px;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .features-highlight h2 {
-                font-size: 24px;
-            }
-
-            .cta-section h2 {
-                font-size: 22px;
-            }
-        }
-    </style>
-</head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Getting Started with Inxource</h1>
-            <p>Your complete guide to building your online business</p>
-        </div>
-    </header>
+<header style="background: #000; color: #fff; padding: 50px 20px; text-align: center;">
+  <h1>Welcome to the Inxource User Guide</h1>
+  <p style="color: #ccc;">Understand your business. Grow smarter. Work easier.</p>
+</header>
 
-    <div class="container">
-        <!-- Section 1: Create Account -->
-        <div class="guide-section">
-            <div class="section-content">
-                <div class="section-number">1</div>
-                <h2>Let's Get You Started!</h2>
-                <p>First things first, we need to create your account. It's quick and easy! Just fill in your full name, email address, and create a password that you'll remember.</p>
-                <p>Then check the box to agree with our Terms and Conditions and Privacy Policy, and boom—you're in! You now have access to your very own Inxource business dashboard where all the magic happens.</p>
-            </div>
-            <div class="section-image">
-                <img src="{{ url_for('static', filename='images/sign up.jpg') }}" alt="Inxource sign up preview">
-            </div>
-        </div>
+<div class="container" style="max-width: 1100px; margin: 60px auto; padding: 0 20px;">
 
-        <!-- Section 2: Choose Payment Method -->
-        <div class="guide-section reverse">
-            <div class="section-content">
-                <div class="section-number">2</div>
-                <h2>How Do You Want to Get Paid?</h2>
-                <p>This is an important choice, and we want to make it simple for you. When you select your subscription plan, you'll pick how you want your customers to pay you.</p>
-                <p>You have two great options: Use our Inxource Wallet where customers pay directly to you through us, and the money sits safely in your wallet ready for you to withdraw anytime. Just request it, and our team will call you within 24 hours to send it to whatever account you prefer.</p>
-                <p>Or, if you like, customers can pay you outside of Inxource—however you both agree. Maybe cash at pickup, mobile money, bank transfer, whatever works for you. Orders still show up in your dashboard so you can track everything and see your business growing.</p>
-            </div>
-            <div class="section-image">
-                <img src="{{ url_for('static', filename='images/payment option.jpg') }}" alt="Inxource subscription Preview">
-            </div>
-        </div>
+  <!-- 1. Getting Started -->
+  <section style="margin-bottom: 80px;">
+    <h2>1. Getting Started with Inxource</h2>
+    <p>
+      Every great business starts with clarity. When you sign up for Inxource, you’re not just creating an account — you’re building the command center for your business.
+      It takes only a few minutes to register your name, email, and password, and from that moment on, you’ll have your own dashboard — where everything that matters about your business lives.
+    </p>
+    <img src="{{ url_for('static', filename='images/create account.jpg') }}" alt="User signing up to Inxource dashboard" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
 
-        <!-- Section 3: Create Business Profile -->
-        <div class="guide-section">
-            <div class="section-content">
-                <div class="section-number">3</div>
-                <h2>Tell Us About Your Business</h2>
-                <p>Now let's make your business shine! This is where you add all the details that make you, you. Upload a logo that represents your brand—it can be a photo, a design, anything that looks good. Then add your business name, pick your industry from our list, and add your registration number and phone number.</p>
-                <p>We'll even create a company alias for you (think of it as your business's nickname on Inxource), but you can change it if you want something different. This is all about letting your customers know exactly who you are and why they should buy from you.</p>
-            </div>
-            <div class="section-image">
-                <img src="{{ url_for('static', filename='images/create business.jpg') }}" alt="Inxource create businessPreview">
-            </div>
-        </div>
+  <!-- 2. Payment Options -->
+  <section style="margin-bottom: 80px;">
+    <h2>2. Choosing How You Get Paid</h2>
+    <p>
+      When you subscribe, Inxource gives you flexibility — because every business works differently. You can choose to use the
+      <strong>Inxource Wallet</strong>, where your money stays secure with Tech Pay Zambia. Think of it as your digital business bank account — easy to manage, withdraw, and track.
+    </p>
+    <p>
+      Or, you can transact outside the wallet. Maybe you prefer direct mobile money or cash payments. That’s fine too.
+      Every order still shows up on your dashboard — you simply confirm it as “Paid.”
+      Either way, you’ll still enjoy the same data insights, analytics, and growth features.
+      The choice is yours — because flexibility is power.
+    </p>
+    <img src="{{ url_for('static', filename='images/pay option.png') }}" alt="Wallet vs outside payment options" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
 
-        <!-- Section 4: Add Products -->
-        <div class="guide-section reverse">
-            <div class="section-content">
-                <div class="section-number">4</div>
-                <h2>Add Your Products and Services</h2>
-                <p>This is the fun part—showing the world what you're selling! Head to your Products section and click "Add Product." You'll fill in what you're offering.</p>
-                <p>Start by picking a category—Agriculture, Technology, Fashion, Services—whatever fits what you do. Then give your product a name, set your selling price, and if you're using our wallet, you can set a partial payment price. This means customers can pay a deposit when they order and pay the rest later. Super flexible!</p>
-                <p>Add a quick description if you want—just a few words about why this product is awesome. And that's it, you're ready to take orders!</p>
-            </div>
-            <div class="section-image">
-                <img src="{{ url_for('static', filename='images/create product.jpg') }}" alt="Inxource create product Preview">
-            </div>
-        </div>
+  <!-- 3. Managing Multiple Businesses -->
+  <section style="margin-bottom: 80px;">
+    <h2>3. Manage All Your Businesses in One Place</h2>
+    <p>
+      Whether you own a salon, a bakery, or a tech shop — Inxource lets you manage all of them under one account.
+      You can add multiple businesses or store locations and monitor them all from a single dashboard.
+      It’s perfect for owners who wear many hats and need a full view of their empire at a glance.
+    </p>
+    <img src="{{ url_for('static', filename='images/create business.png') }}" alt="Multiple stores dashboard view" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
 
-        <!-- Section 5: Manage Stock -->
-        <div class="guide-section">
-            <div class="section-content">
-                <div class="section-number">5</div>
-                <h2>Keep Track of Your Stock</h2>
-                <p>We've got a super simple way for you to manage what you have in stock. Go to your Inventory section, and whenever you add products to your stock, we keep track of everything for you.</p>
-                <p>The best part? When a customer orders something, your stock count goes down automatically. No manual math needed! You can see at a glance how many total products you have, which items are running low and might need reordering, and which ones are out of stock. This way, you always know what you have and what you need to restock.</p>
-            </div>
-            <div class="section-image">
-                <img src="{{ url_for('static', filename='images/inventory.jpg') }}" alt="Inxource inventory Preview">
-            </div>
-        </div>
+  <!-- 4. Adding Products and Services -->
+  <section style="margin-bottom: 80px;">
+    <h2>4. Add Your Products and Services</h2>
+    <p>
+      Your products are the heartbeat of your business — and Inxource helps them shine.
+      You can create detailed listings with images, descriptions, and prices for each product or service.
+      Whether you’re selling shoes, braiding hair, or baking cakes, everything is organized beautifully for your customers to see.
+    </p>
+    <img src="{{ url_for('static', filename='images/create product.png') }}" alt="Product creation page" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
 
-        <!-- Section 6: Create Order Link -->
-        <div class="guide-section reverse">
-            <div class="section-content">
-                <div class="section-number">6</div>
-                <h2>Share Your Store With the World</h2>
-                <p>Now for the exciting part—getting customers! We make it super easy for you to share your online store. Just generate your order link, and you can share it anywhere—WhatsApp, Facebook, Instagram, email, wherever your customers hang out.</p>
-                <p>Or if you'd rather, generate a QR code. You can print it and stick it on your shop counter, your market stall, your delivery van—anywhere! When customers scan it with their phone, boom, they're in your store ready to order.</p>
-                <p>You're now officially open for business online!</p>
-            </div>
-            <div class="section-image">
-                <img src="{{ url_for('static', filename='images/order link.jpg') }}" alt="Inxource order link Preview">
-            </div>
-        </div>
+  <!-- 5. Inventory Tracking -->
+  <section style="margin-bottom: 80px;">
+    <h2>5. Keep Track of Your Inventory Automatically</h2>
+    <p>
+      No more notebooks or guesswork. Every time you add products, Inxource tracks your inventory automatically.
+      When sales happen, your stock updates in real time. You’ll always know what’s selling fast, what’s running low, and what needs restocking — without lifting a finger.
+    </p>
+    <img src="{{ url_for('static', filename='images/inventory.png') }}" alt="Inventory tracking visualization" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
 
-        <!-- Section 7: Manage Orders -->
-        <div class="guide-section">
-            <div class="section-content">
-                <div class="section-number">7</div>
-                <h2>Watch Your Orders Come In</h2>
-                <p>When customers start ordering through your link, each order shows up in your dashboard. At first, it'll say "Incomplete" because you haven't fulfilled it yet. If you're using our wallet, the customer's down payment is already safe in your wallet.</p>
-                <p>Once you've given them their product or service and they've paid the rest (however you agreed), you just mark the order as complete. That's it! Now Inxource saves all that information, keeps track of it, and starts analyzing your sales so you can see patterns and grow smarter.</p>
-                <p>Every completed order is a win for you, and we help you keep score!</p>
-            </div>
-            <div class="section-image">
-                <img src="{{ url_for('static', filename='images/manage orders.jpg') }}" alt="Inxource create businessPreview">
-            </div>
-        </div>
-    </div>
+  <!-- 6. Quick Sales Recording with POS -->
+  <section style="margin-bottom: 80px;">
+    <h2>6. Record Sales in Seconds</h2>
+    <p>
+      Every Inxource account includes its own internal <strong>Point of Sale (POS)</strong> system.
+      With just a few clicks, you can record any sale that happens in-store — fast, clean, and secure.
+      Even when you’re busy, it takes less than 5 seconds to keep your data up to date.
+    </p>
+    <img src="{{ url_for('static', filename='images/pos.png') }}" alt="Inxource POS interface" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
 
-    <!-- Features Section -->
-    <section class="features-highlight">
-        <div class="container">
-            <h2>Powerful Features to Grow Your Business</h2>
+  <!-- 7. Online Store and Order Links -->
+  <section style="margin-bottom: 80px;">
+    <h2>7. Share Your Store Online</h2>
+    <p>
+      Inxource gives every business a unique <strong>online store link</strong> — your own digital shop front.
+      Share it with your customers on WhatsApp, Facebook, Instagram, or even print it as a QR code for your shop counter.
+      Customers can browse your products, place orders, upload reference photos, and even add special instructions — all in one place.
+    </p>
+    <img src="{{ url_for('static', filename='images/order link.png') }}" alt="Customer using online store link" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
 
-            <div class="features-grid">
-                <div class="feature-box">
-                    <div class="feature-icon">📊</div>
-                    <h3>Dashboard Analytics</h3>
-                    <p>View your best-selling periods, customer retention rates, top products, and complete sales records. Keep all your sales data structured and secure in one place.</p>
-                </div>
+  <!-- 8. Fulfilling Orders and Analytics -->
+  <section style="margin-bottom: 80px;">
+    <h2>8. Fulfilling Orders and Understanding Your Growth</h2>
+    <p>
+      Every order appears instantly in your dashboard. Once you mark it as fulfilled, Inxource begins analyzing the data behind your business — automatically.
+      You’ll see which products perform best, who your repeat customers are, and where your profits come from.
+    </p>
+    <p>
+      This is where the magic happens: your dashboard becomes your silent business advisor.
+      You start seeing trends, spotting opportunities, and running your business with the same precision big companies enjoy.
+      Because small businesses deserve smart tools too.
+    </p>
+    <img src="{{ url_for('static', filename='images/order.png') }}" alt="Analytics dashboard showing growth trends" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
 
-                <div class="feature-box">
-                    <div class="feature-icon">🤖</div>
-                    <h3>LennyAI Assistant</h3>
-                    <p>Your personal business chatbot with complete access to your data. Ask questions about your business performance and get AI-powered recommendations for growth and improvement.</p>
-                </div>
+  <!-- 9. Meet Lenny AI -->
+  <section style="margin-bottom: 80px;">
+    <h2>9. Meet Lenny — Your AI Business Assistant</h2>
+    <p>
+      Lenny is your personal business companion — available anytime you need her.
+      You can ask questions like “How much did I sell today?” or “Why are my sales lower this week?”
+      She’ll give clear, data-backed answers instantly.
+    </p>
+    <p>
+      Think of her as your in-house analyst, always ready to explain your numbers and guide your next move.
+      Even when you’re tired, you can simply talk to Lenny — and she’ll handle the thinking for you.
+    </p>
+    <img src="{{ url_for('static', filename='images/lenny.png') }}" alt="AI assistant interacting with business owner" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
 
-                <div class="feature-box">
-                    <div class="feature-icon">📈</div>
-                    <h3>Real-Time Insights</h3>
-                    <p>Track growth rates, customer satisfaction, sales trends, and customer analytics as they happen. Make data-driven decisions instantly and identify opportunities faster.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- 10. Inxource Wallet and Withdrawals -->
+  <section style="margin-bottom: 80px;">
+    <h2>10. Your Inxource Wallet</h2>
+    <p>
+      Your Inxource Wallet isn’t just a safe place for your money — it’s a smart way to build discipline.
+      Funds stay protected until you choose to withdraw them, giving you full control over your business finances.
+      When you’re ready, just request a withdrawal — and it’s processed quickly and securely.
+    </p>
+    <p>
+      This system helps small business owners develop healthier financial habits, manage cash flow better, and keep business money separate from personal spending.
+      It’s a simple step that leads to long-term stability.
+    </p>
+    <img src="{{ url_for('static', filename='images/withdraw.png') }}" alt="Wallet withdrawal process" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
+</div>
 
-    <!-- CTA Section -->
-    <section class="cta-section" style="background-color: transparent;">
-      <div class="container" style="text-align: center;">
-        <h2 style="color: #000;">Ready to Launch Your Online Store?</h2>
-        <p style="font-size: 18px; margin-bottom: 30px; color: #000;">
-          Get started with Inxource today and turn your data into your competitive advantage.
-        </p>
-        <button class="cta-btn"
-                style="color: #000; background-color: #fff; border: 1px solid #000; padding: 10px 25px; border-radius: 8px; cursor: pointer;"
-                onclick="window.open('https://dashboard.inxource.com', '_blank')">
-          Get Started Now
-        </button>
-
-      </div>
-    </section>
-
+<!-- CTA Section -->
+<section style="text-align: center; padding: 80px 20px;">
+  <h2>Start Managing Smarter</h2>
+  <p style="color: #333; font-size: 16px; margin-top: 10px;">
+    You’ve built something amazing — now let Inxource make it easier to grow, track, and understand it.
+  </p>
+  <button class="cta-btn"
+    style="background: #000; color: #fff; padding: 15px 40px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; margin-top: 25px;"
+    onclick="window.open('https://dashboard.inxource.com', '_blank')">
+    Go to Dashboard
+  </button>
+</section>
 
 </body>
 {% endblock %}

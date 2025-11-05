@@ -1,288 +1,105 @@
 {% extends "base.html" %}
 
-{% block title %}Inxource - Turn Data into your fastest competitive advantage{% endblock %}
+{% block title %}Inxource - Built for Business Owners Like You{% endblock %}
 
 {% block content %}
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h1>Turn Data into your fastest competitive advantage.</h1>
-        <p><strong>Run your business with confidence, not guesswork.</strong></p>
-        <p>inXource helps businesses of every size unlock the full value of their data. Whether you're running a fast-moving shop or leading a large-scale operation, we help you turn information into action at the speed of your decisions.</p>
-        <button class="cta-btn" onclick="window.open('{{ inxource_dashboard }}', '_blank')">Get Started</button>
-    </div>
-    <div class="hero-image">
-        <img src="{{ url_for('static', filename='images/inxource login_PhotoGrid.png') }}" alt="Inxource Dashboard Preview">
-        <div class="carousel-dots">
-            <!--<span class="dot active"></span>-->
-            <!--<span class="dot"></span>-->
-        </div>
-    </div>
-</section>
 
-<section id="features" class="features-grid">
-    <div class="feature-card">
-        <div class="feature-header">
-            <span class="feature-badge">✓</span>
-            <span>Feature</span>
-        </div>
-        <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        </div>
-        <h3>Stay organized with a clear business dashboard</h3>
-    </div>
-
-    <div class="feature-card">
-        <div class="feature-header">
-            <span class="feature-badge">✓</span>
-            <span>Feature</span>
-        </div>
-        <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        </div>
-        <h3>Track sales and customers in real time</h3>
-    </div>
-
-    <div class="feature-card">
-        <div class="feature-header">
-            <span class="feature-badge">✓</span>
-            <span>Feature</span>
-        </div>
-        <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Automate manual workflows with one click</h3>
-    </div>
-
-    <div class="feature-card">
-        <div class="feature-header">
-            <span class="feature-badge">✓</span>
-            <span>Feature</span>
-        </div>
-        <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        </div>
-        <h3>Spot patterns and opportunities faster</h3>
-    </div>
-</section>
-
-<section class="how-it-works">
-    <h2>How it works</h2>
-    <p class="subtitle">Affordable, predictable, built for growth.</p>
-    <div class="steps">
-        <div class="step">
-            <div class="step-number">1</div>
-            <h3>Connect your business in one place</h3>
-            <h5>Bring all your sales and customer data together seamlessly.</h5>
-        </div>
-        <div class="step">
-            <div class="step-number">2</div>
-            <h3>Discover insights instantly</h3>
-            <h5>See patterns, trends, and opportunities in minutes.</h5>
-        </div>
-        <div class="step">
-            <div class="step-number">3</div>
-            <h3>Automate and grow effortlessly</h3>
-            <h5>Streamline daily tasks and focus on scaling your business.</h5>
-        </div>
-    </div>
-</section>
-
-<section class="why-choose">
-    <h2>Why choose Inxource</h2>
-    <p class="subtitle">Automation, Organization, Growth.</p>
-    <div class="discovery-items">
-        <div class="discovery-item">
-            <div class="discovery-icon">
-                <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-            </div>
-            <div>
-                <h4>Automation</h4>
-                <p>We automate your order process so you can simply view all customer purchases in your dashboard without manual intervention.</p>
-            </div>
-        </div>
-        <div class="discovery-item">
-            <div class="discovery-icon">
-                <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-            </div>
-            <div>
-                <h4>Organization</h4>
-                <p>We give you a clear view of your sales, customers, and repeat buyers so you can stay on top of your business with ease.</p>
-            </div>
-        </div>
-        <div class="discovery-item">
-            <div class="discovery-icon">
-                <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-            </div>
-            <div>
-                <h4>Growth</h4>
-                <p>Our Lenny AI Assistant acts as your business advisor, analyzing patterns and seasons in your sales and guiding you on how to move forward strategically.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="testimonials" id="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonial-slider">
-        <div class="slider-arrows">
-            <button class="arrow">‹</button>
-            <button class="arrow">›</button>
-        </div>
-        <div class="testimonial-section">
-            <div class="testimonial-card">
-                <div class="stars">★ ★ ★ ★ ☆</div>
-                <p class="testimonial-text">
-                    "We’re collecting stories from our first-time users — yours could be featured here soon! Be one of the first to try InXource and share your experience."
-                </p>
-                <div class="testimonial-author">
-                    <div class="author-avatar" style="background-color: #ddd; border-radius: 50%; width: 50px; height: 50px;"></div>
-                    <div class="author-info">
-                        <h5>First-Time User</h5>
-                        <p>Small Business · Zambia</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!--
-        <div class="slider-dots">
-            <span class="slider-dot active"></span>
-            <span class="slider-dot"></span>
-            <span class="slider-dot"></span>
-            <span class="slider-dot"></span>
-            <span class="slider-dot"></span>
-        </div>
-        -->
-    </div>
-</section>
-
-<section id="pricing" class="pricing">
-    <h2>Pricing Plans</h2>
-    <p class="subtitle">Affordable, predictable, built for growth.</p>
-
-    <div class="pricing-cards">
-        <div class="pricing-card">
-  <div class="plan-name">Starter Plan</div>
-  <p class="plan-desc">Perfect for trying InXource — limited to 50 records.</p>
-
-  <div class="plan-features">
-    <div>Automatic Sales & Customer Tracking</div>
-    <div>Sales & Customer Analytics</div>
-    <div>Lenny AI Business Assistant</div>
-    <div>InXource Wallet</div>
-    <div>Flexible Transaction Handling</div>
+<section id="home" class="hero" style="align-items: center; gap: 40px;">
+  <div class="hero-content">
+    <h1>The Unsung Heroes of Our Economy</h1>
+    <p>
+      To every small business owner and manager — thank you. You are the heartbeat of our economy. You employ, innovate, and keep communities alive. SMEs like yours make up over 70% of our economy, and yet, you often work the hardest with the least recognition. This page is for you — a message of gratitude, empowerment, and possibility.
+    </p>
   </div>
-
-  <div class="price">$1</div>
-  <div class="price-period">once off</div>
-</div>
-
-
-        <div class="pricing-card">
-          <div class="plan-name">Standard Plan</div>
-          <p class="plan-desc">Powerful tools for small businesses ready to grow.</p>
-
-          <div class="plan-features">
-            <div>Automatic Sales & Customer Tracking</div>
-            <div>Sales & Customer Analytics</div>
-            <div>Lenny AI Business Assistant</div>
-            <div>InXource Wallet</div>
-            <div>Flexible Transaction Handling</div>
-          </div>
-
-          <div class="price">$5</div>
-          <div class="price-period">/month</div>
-        </div>
-
-
-        <div class="pricing-card">
-          <div class="plan-name">Pro Plan</div>
-          <p class="plan-desc">Everything in Standard, plus advanced automation and team tools.</p>
-
-          <div class="plan-features">
-            <div>Social Media Posting Agent</div>
-            <div>Real-Time AI Analytics & Recommendations</div>
-            <div>Team Availability & Management</div>
-            <div>Push Notifications</div>
-          </div>
-
-          <div class="price">$15</div>
-          <div class="price-period">/month</div>
-        </div>
-
-    </div>
-
-    <div class="pricing-cta">
-        <h3>Ready to get organized and take control of your business?</h3>
-        <p>Start your journey to better data-driven decisions today.</p>
-        <button class="cta-btn" onclick="window.open('{{ inxource_dashboard }}', '_blank')">Let's Get Started</button>
-    </div>
+  <div class="hero-image">
+    <img src="{{ url_for('static', filename='images/woman_bakery.png') }}" alt="A smiling Zambian woman proudly running her bakery shop">
+  </div>
 </section>
 
-<section id="faqs" class="faqs">
-    <h2>Frequently Asked Questions</h2>
-    <p class="subtitle">Everything you need to know about Inxource</p>
-    <div class="faq-container">
-        <div class="faq-item">
-            <div class="faq-question">
-                <h4>What is Inxource?</h4>
-                <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Inxource is a business intelligence platform that helps you turn your data into actionable insights. We automate your order processing, organize your customer data, and provide AI-powered analytics to help you make better business decisions.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h4>How does the automation work?</h4>
-                <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Our platform automatically syncs with your sales channels and processes orders in real-time. All customer purchases are instantly reflected in your dashboard without any manual data entry required.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h4>What is Lenny AI Assistant?</h4>
-                <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Lenny is our AI-powered business advisor that analyzes your sales patterns, identifies seasonal trends, and provides strategic recommendations to help you grow your business more effectively.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h4>Can I switch plans later?</h4>
-                <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Yes! You can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle, and we'll prorate any differences.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h4>Is my data secure?</h4>
-                <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Absolutely. We use bank-level encryption to protect your data and follow industry best practices for security. Your business information is stored securely and never shared with third parties.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h4>Do you offer customer support?</h4>
-                <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Yes! All plans include email support. Growth and Pro plans also get priority support with faster response times. Our team is here to help you succeed.</p>
-            </div>
-        </div>
-    </div>
+<section id="why-data-matters" style="margin-top: 80px;">
+  <h2>As a Boss, You Deserve to Know Everything About Your Business</h2>
+  <p>
+    Running a business is a journey filled with courage and endless decisions. Every day you make choices — when to restock, what to promote, how to serve your customers better. But what if those decisions weren’t guesses? What if you could see clearly how your business is performing, who your most loyal customers are, and where your biggest opportunities lie?
+  </p>
+  <p>
+    Understanding your data means more than just numbers. It’s the difference between hoping and knowing. It’s being able to compare this month’s sales to last year’s, spotting patterns before they become problems, and realizing which days or locations drive your success. It’s knowing who keeps coming back and why — and finding out where you’re losing customers before it’s too late.
+  </p>
+  <p>
+    Data gives you the power to make smarter, faster decisions — not because you studied statistics, but because you understand your own story. That’s what every business owner deserves.
+  </p>
 </section>
+
+<section id="big-company-gap" style="margin-top: 80px;">
+  <h2>The Tools Big Companies Take for Granted</h2>
+  <p>
+    Walk into a large supermarket or corporate office and you’ll find something invisible but powerful — data. These companies know exactly what sells, who buys, and when to launch something new. They have access to expensive POS systems, ERP software, and teams of analysts who translate every sale into strategy.
+  </p>
+  <p>
+    But what about you — the mother who just opened a bakery, the young man selling shoes after class, or the woman running a small salon in town? You don’t have a team of engineers or a million-dollar system. Yet, your dream, your effort, and your drive are just as powerful. You deserve the same clarity and control — without the cost or complexity.
+  </p>
+</section>
+
+<section id="how-inxource-helps" style="margin-top: 80px;">
+  <h2>How Inxource Levels the Playing Field</h2>
+  <p>
+    At <strong>Inxource</strong>, we built a platform designed to give you the same insight and intelligence big businesses enjoy — but in a way that’s simple, human, and affordable. Imagine being able to see, from anywhere, how your business is doing right now. You open your dashboard and instantly see: today’s total sales, who’s been buying, and which area is driving the most growth.
+  </p>
+  <p>
+    You don’t need to be in the shop to know what’s happening. Whether you’re at home, on the road, or managing multiple locations, you stay connected. You’ll know when sales rise, when they slow, and even when your most loyal customers visit. No complex reports. No spreadsheets. Just clear information that helps you act quickly.
+  </p>
+  <p>
+    For those who sell online, we go a step further. Inxource gives you your own online store — one you can share with customers who prefer to order remotely. They can upload pictures, write delivery details, and even describe exactly what they want — like asking for a Barbie doll on top of their daughter’s cake. And all of it appears neatly in your dashboard, ready to fulfill.
+  </p>
+</section>
+
+<section id="lenny-ai" style="margin-top: 80px;">
+  <h2>What If You’re Tired and Just Want to Rest?</h2>
+  <p>
+    We understand that sometimes you’re tired, busy, or simply want quick answers without scrolling through charts. That’s why we built <strong>Lenny</strong> — your AI assistant who talks to you like a real teammate. Just ask her, “How much did we sell today?” or “Why are my sales lower this week?” and she’ll tell you — clearly and instantly.
+  </p>
+  <p>
+    Lenny isn’t just a chatbot. She’s your business companion. She helps you interpret your numbers, understand your customers, and even gives advice on what to improve next. With Lenny by your side, understanding your business becomes as easy as having a conversation.
+  </p>
+  <div class="hero-image">
+    <img src="{{ url_for('static', filename='images/lenny_ai.png') }}" alt="Illustration showing a friendly AI assistant helping a business owner analyze sales data">
+  </div>
+</section>
+<!--
+<section id="testimonials" style="margin-top: 80px;">
+  <h2>What Other Entrepreneurs Are Saying</h2>
+  <p>
+    “Before Inxource, I didn’t really understand how my salon was doing week to week. I used to rely on guesses and notes in my phone. Now I can see everything in one place — and Lenny even gives me tips on how to grow. It’s like having my own data team.” — <strong>Thandi, Salon Owner (Kitwe)</strong>
+  </p>
+  <p>
+    “I used to think data was only for big companies. But now, every morning, I check Inxource on my phone. It shows me how many orders I’ve received, what’s trending, and even what customers love most. It’s changed how I run my business.” — <strong>Maria, Bakery Owner (Ndola)</strong>
+  </p>
+</section>
+-->
+
+<section id="pricing" style="margin-top: 80px;">
+  <h2>Simple, Transparent Pricing</h2>
+  <p>
+    Get started today and experience how InXource simplifies your business decisions.
+    You can <strong>try it out for just $1 (about 25 ZMW) for your first month</strong> — no commitments, just value.
+    Once you’ve had a feel for it and love what you see,
+    continue for only <strong>$10 per month (around 250 ZMW)</strong>.
+  </p>
+  <p>
+    We believe in fairness. No hidden fees, no confusing tiers — just clear, affordable pricing built for real business owners like you.
+  </p>
+</section>
+
+
+<section id="closing-message" style="padding: 80px 20px; text-align: center;">
+  <div class="container">
+    <h2>You’ve done the hard work. Let Inxource make it easier.</h2>
+    <p style="margin-top: 20px; font-size: 16px; color: #333; max-width: 700px; margin-left: auto; margin-right: auto;">
+      Your dream keeps the world turning. Every sale, every customer, every late night spent keeping things running — it matters.
+      Inxource was built to make your journey smoother, your business clearer, and your growth inevitable.
+    </p>
+  </div>
+</section>
+
+
+
 {% endblock %}
