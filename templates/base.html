@@ -737,6 +737,7 @@
                         <a href="{{ url_for('user_guide') }}" class="nav-link guide-link show">User Guide</a>
                     </li>
                     {% endif %}
+                    {% if active_tab == 'sme' %}
                     <li>
                       <a href="{{ inxource_dashboard }}"
                          class="login-btn"
@@ -746,6 +747,16 @@
                         Login
                       </a>
                     </li>
+                    {% elif active_tab == 'enterprise' %}
+                    <li>
+                      <a href="{{ url_for('enterprise') }}#cta"
+                         class="login-btn"
+                         style="background: #fff; color: #000; border: 1px solid #000;">
+                        Talk to Sales
+                      </a>
+                    </li>
+                    {% endif %}
+
                 </ul>
             </nav>
 
