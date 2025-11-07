@@ -4,108 +4,345 @@
 
 {% block content %}
 
-<section id="home" class="hero" style="align-items: center; gap: 40px;">
-  <div class="hero-content">
-    <h1>The Unsung Heroes of Our Economy</h1>
-    <p>
-      To every small business owner and manager — thank you. You are the heartbeat of our economy. You employ, innovate, and keep communities alive. SMEs like yours make up over 70% of our economy, and yet, you often work the hardest with the least recognition. This page is for you — a message of gratitude, empowerment, and possibility.
-    </p>
-  </div>
-  <div class="hero-image">
-    <img src="{{ url_for('static', filename='images/woman_bakery.png') }}" alt="A smiling Zambian woman proudly running her bakery shop">
-  </div>
-</section>
+<!-- Updated Hero Section: 3x1 Grid on Desktop, Single Column on Mobile -->
+<section id="home" class="hero">
+  <div class="section-container fixed">
+    <div class="text">
+      <h1>The Unsung Heroes of Our Economy</h1>
+      <p>
+        To every small business owner — thank you. You’re the heartbeat of our economy,
+        keeping communities alive through your hard work and innovation.
+        This page is for you — a message of gratitude, empowerment, and possibility.
+      </p>
+      <button
+        class="cta"
+        onclick="document.getElementById('why-data-matters').scrollIntoView({behavior:'smooth'})"
+      >
+        See How Inxource Helps
+      </button>
+    </div>
 
-<section id="why-data-matters" style="margin-top: 80px;">
-  <h2>As a Boss, You Deserve to Know Everything About Your Business</h2>
-  <p>
-    Running a business is a journey filled with courage and endless decisions. Every day you make choices — when to restock, what to promote, how to serve your customers better. But what if those decisions weren’t guesses? What if you could see clearly how your business is performing, who your most loyal customers are, and where your biggest opportunities lie?
-  </p>
-  <p>
-    Understanding your data means more than just numbers. It’s the difference between hoping and knowing. It’s being able to compare this month’s sales to last year’s, spotting patterns before they become problems, and realizing which days or locations drive your success. It’s knowing who keeps coming back and why — and finding out where you’re losing customers before it’s too late.
-  </p>
-  <p>
-    Data gives you the power to make smarter, faster decisions — not because you studied statistics, but because you understand your own story. That’s what every business owner deserves.
-  </p>
-</section>
-
-<section id="big-company-gap" style="margin-top: 80px;">
-  <h2>The Tools Big Companies Take for Granted</h2>
-  <p>
-    Walk into a large supermarket or corporate office and you’ll find something invisible but powerful — data. These companies know exactly what sells, who buys, and when to launch something new. They have access to expensive POS systems, ERP software, and teams of analysts who translate every sale into strategy.
-  </p>
-  <p>
-    But what about you — the mother who just opened a bakery, the young man selling shoes after class, or the woman running a small salon in town? You don’t have a team of engineers or a million-dollar system. Yet, your dream, your effort, and your drive are just as powerful. You deserve the same clarity and control — without the cost or complexity.
-  </p>
-</section>
-
-<section id="how-inxource-helps" style="margin-top: 80px;">
-  <h2>How Inxource Levels the Playing Field</h2>
-  <p>
-    At <strong>Inxource</strong>, we built a platform designed to give you the same insight and intelligence big businesses enjoy — but in a way that’s simple, human, and affordable. Imagine being able to see, from anywhere, how your business is doing right now. You open your dashboard and instantly see: today’s total sales, who’s been buying, and which area is driving the most growth.
-  </p>
-  <p>
-    You don’t need to be in the shop to know what’s happening. Whether you’re at home, on the road, or managing multiple locations, you stay connected. You’ll know when sales rise, when they slow, and even when your most loyal customers visit. No complex reports. No spreadsheets. Just clear information that helps you act quickly.
-  </p>
-  <p>
-    For those who sell online, we go a step further. Inxource gives you your own online store — one you can share with customers who prefer to order remotely. They can upload pictures, write delivery details, and even describe exactly what they want — like asking for a Barbie doll on top of their daughter’s cake. And all of it appears neatly in your dashboard, ready to fulfill.
-  </p>
-</section>
-
-<section id="lenny-ai" style="margin-top: 80px;">
-  <h2>What If You’re Tired and Just Want to Rest?</h2>
-  <p>
-    We understand that sometimes you’re tired, busy, or simply want quick answers without scrolling through charts. That’s why we built <strong>Lenny</strong> — your AI assistant who talks to you like a real teammate. Just ask her, “How much did we sell today?” or “Why are my sales lower this week?” and she’ll tell you — clearly and instantly.
-  </p>
-  <p>
-    Lenny isn’t just a chatbot. She’s your business companion. She helps you interpret your numbers, understand your customers, and even gives advice on what to improve next. With Lenny by your side, understanding your business becomes as easy as having a conversation.
-  </p>
-  <div class="hero-image">
-    <img src="{{ url_for('static', filename='images/lenny_ai.png') }}" alt="Illustration showing a friendly AI assistant helping a business owner analyze sales data">
+    <!-- 2x3 Grid on Desktop, 3 Images Row on Mobile -->
+    <div class="visual-grid">
+      <img src="{{ url_for('static', filename='images/woman_bakery.png') }}" alt="Bakery owner" />
+      <img src="{{ url_for('static', filename='images/shoe store.png') }}" alt="Shoe store owner" />
+      <img src="{{ url_for('static', filename='images/flower girl.png') }}" alt="Flower girl" class="mobile-hide" />
+      <img src="{{ url_for('static', filename='images/cake couple.png') }}" alt="Shop owner" class="mobile-hide" />
+      <img src="{{ url_for('static', filename='images/barber saloon.png') }}" alt="Barber salon" />
+      <img src="{{ url_for('static', filename='images/chitenges.png') }}" alt="Shop owner" class="mobile-hide" />
+    </div>
   </div>
 </section>
-<!--
-<section id="testimonials" style="margin-top: 80px;">
-  <h2>What Other Entrepreneurs Are Saying</h2>
-  <p>
-    “Before Inxource, I didn’t really understand how my salon was doing week to week. I used to rely on guesses and notes in my phone. Now I can see everything in one place — and Lenny even gives me tips on how to grow. It’s like having my own data team.” — <strong>Thandi, Salon Owner (Kitwe)</strong>
-  </p>
-  <p>
-    “I used to think data was only for big companies. But now, every morning, I check Inxource on my phone. It shows me how many orders I’ve received, what’s trending, and even what customers love most. It’s changed how I run my business.” — <strong>Maria, Bakery Owner (Ndola)</strong>
-  </p>
-</section>
--->
 
-<section id="pricing" style="margin-top: 80px;">
+<section id="why-data-matters" class="section">
+  <div class="section-container">
+    <div class="text">
+      <h2>As a Boss, You Deserve to Know Everything About Your Business</h2>
+      <p>
+        You can’t manage what you can’t see. Whether you’re in the shop or away, get a clear, real-time view of your sales,
+        customers, and growth — anywhere, anytime, all without the math.
+      </p>
+    </div>
+  </div>
+  <div class="tiles small-illustrations">
+    <div class="tile">
+      <img src="{{ url_for('static', filename='images/decision_making.png') }}" alt="Business decision making" />
+      <h4>Business decision making</h4>
+      <p>Make decisions backed by clear numbers, not guesswork.</p>
+    </div>
+    <div class="tile">
+      <img src="{{ url_for('static', filename='images/sales _patterns.png') }}" alt="Sales pattern recognition" />
+      <h4>Sales pattern recognition</h4>
+      <p>Spot trends before they become problems.</p>
+    </div>
+    <div class="tile">
+      <img src="{{ url_for('static', filename='images/customer_retention.png') }}" alt="Customer loyalty" />
+      <h4>Customer loyalty</h4>
+      <p>Understand who keeps coming back — and why.</p>
+    </div>
+  </div>
+</section>
+
+<section id="big-company-gap" class="section">
+  <div class="section-container fixed">
+    <div class="text">
+      <h2>The Tools Big Companies Take for Granted</h2>
+      <p>
+        Ever walked into a supermarket and watched the cashier punch items into a machine?
+        That machine isn’t just a till — it’s connected to powerful systems called ERPs that track everything:
+        what’s in stock, what’s selling fast, and what’s moving slowly.
+
+        Big businesses know this data matters. It’s why some products disappear from shelves — their data showed
+        exactly what
+        wasn’t selling. That’s how they make smart decisions.
+
+      </p>
+      <p>
+       But what about you — the mother who bakes to support her family, the student selling shoes to pay tuition,
+        or the woman running a small salon to make ends meet?
+        You may not have big-company tools or data teams, but your dream is just as powerful.
+        You deserve that same clarity — without the cost or complexity.
+      </p>
+    </div>
+    <div class="visual">
+      <img src="{{ url_for('static', filename='images/big_business.png') }}" alt="Big company analytics" />
+    </div>
+  </div>
+</section>
+
+<section id="how-inxource-helps" class="section">
+  <div class="section-container">
+    <div class="text">
+      <h2>How Inxource Levels the Playing Field</h2>
+      <p>
+        <strong>inXource</strong> levels the playing field by giving you the clarity big businesses pay millions for.
+
+        It helps you see what’s happening — even when you’re not at the shop. Every sale is recorded automatically,
+        your data organized neatly, and patterns tracked through AI.
+
+        Instead of reading complex reports, you get the answers in simple, conversational English —
+        “Your sales are up today by 20%,” or “Customers bought more on mobile this week.”
+
+        No need for a data team or a degree in analytics — just clear insights that help you act faster, smarter,
+        and more confidently.
+      </p>
+    </div>
+    <div class="visual">
+      <img src="{{ url_for('static', filename='images/uplift.png') }}" alt="Inxource dashboard preview" />
+    </div>
+  </div>
+</section>
+
+<section id="lenny-ai" class="section">
+  <div class="section-container">
+    <div class="text">
+      <h2>What If You're Tired and Just Want to Rest?</h2>
+      <p>
+        We understand that sometimes you're tired, busy, or simply want quick answers without scrolling through charts.
+        That's why we built <strong>Lenny</strong> — your AI assistant who talks to you like a real teammate.
+        Just ask her, "How much did we sell today?" or "Why are my sales lower this week?" and she'll tell you — clearly and instantly.
+      </p>
+      <p>
+        Lenny isn't just a chatbot. She's your business companion. She helps you interpret your numbers,
+        understand your customers, and even gives advice on what to improve next.
+        With Lenny by your side, understanding your business becomes as easy as having a conversation.
+      </p>
+    </div>
+    <div class="visual">
+      <img src="{{ url_for('static', filename='images/lenny_ai.png') }}" alt="Illustration of friendly AI assistant helping business owner" />
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing-section">
   <h2>Simple, Transparent Pricing</h2>
-  <p>
-    Get started today and see how InXource helps you track sales, understand your customers,
-    and make smarter business decisions — all in one place.
-  </p>
-  <p>
-    <strong>Try it out for just $1 which is about  K25</strong> and enjoy full access for <strong>two weeks</strong>.
-    No commitments — just a chance to experience how real insights can grow your business.
-  </p>
-  <p>
-    Love what you see? Secure your future with a <strong>3-year plan for only $40 (about K1,000)</strong>
-    and keep using the same powerful tools big businesses use — made affordable for you.
-  </p>
-  <p>
-    We believe in fairness. No hidden fees, no confusing tiers — just clear, affordable pricing built
-    for real business owners who matter.
-  </p>
-</section>
-
-
-
-<section id="closing-message" style="padding: 80px 20px; text-align: center;">
-  <div class="container">
-    <h2>You’ve done the hard work. Let Inxource make it easier.</h2>
-    <p style="margin-top: 20px; font-size: 16px; color: #333; max-width: 700px; margin-left: auto; margin-right: auto;">
-      Your dream keeps the world turning. Every sale, every customer, every late night spent keeping things running — it matters.
-      Inxource was built to make your journey smoother, your business clearer, and your growth inevitable.
-    </p>
+  <div class="pricing-cards">
+    <div class="price-card">
+      <h3>Starter Plan</h3>
+      <p><strong>K25</strong> for 2 weeks — full access to all features.</p>
+    </div>
+    <div class="price-card highlighted">
+      <h3>3-Year Growth Plan</h3>
+      <p><strong>K1,000</strong> for 3 years — best value for growing SMEs.</p>
+    </div>
   </div>
+  <p class="note">No hidden fees. No complicated tiers. Just fairness for real business owners who matter.</p>
 </section>
+
+<section id="closing-message" class="closing">
+  <h2>You've done the hard work. Let Inxource make it easier.</h2>
+  <p>
+    Your dream keeps the world turning. Every sale, every customer, every late night — it matters.
+    Inxource was built to make your journey smoother, your business clearer, and your growth inevitable.
+  </p>
+  <button class="cta" onclick="window.open('{{ inxource_dashboard }}','_blank')">Get Started</button>
+</section>
+
+<style>
+  .section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 5%;
+  }
+
+  .section-container.fixed {
+    min-height: 500px;
+  }
+
+  .text {
+    flex: 1;
+    min-width: 320px;
+  }
+
+  /* HERO IMAGE GRID - 3 columns x 2 rows on desktop */
+  .visual-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    flex: 1;
+    width: 100%;
+    min-width: 550px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .visual-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .visual-grid img:hover {
+    transform: scale(1.05);
+  }
+
+  .mobile-hide {
+    display: block;
+  }
+
+  /* OTHER SECTIONS - Make images responsive */
+  .visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .visual img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* MOBILE - Show only 3 images in a single row */
+  @media (max-width: 768px) {
+    .section-container {
+      flex-direction: column;
+      gap: 30px;
+      padding: 40px 5%;
+    }
+
+    .section-container.fixed {
+      min-height: auto;
+    }
+
+    .text {
+      min-width: auto;
+      width: 100%;
+    }
+
+    /* 3 images in a single row on mobile */
+    .visual-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      max-width: 100%;
+      min-width: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .visual-grid img {
+      height: 120px;
+    }
+
+    /* Hide 3 images on mobile */
+    .mobile-hide {
+      display: none;
+    }
+
+    /* Make other section images responsive */
+    .visual {
+      width: 100%;
+    }
+
+    .visual img {
+      max-width: 100%;
+    }
+  }
+
+  h1, h2 { color: #111; margin-bottom: 20px; }
+  h1 { font-size: 2.5rem; line-height: 1.2; }
+  h2 { font-size: 2rem; }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+  }
+
+  p { color: #333; font-size: 1.05rem; line-height: 1.6; }
+  .cta {
+    background: #EA1B2C; color: #fff; border: none;
+    padding: 12px 20px; border-radius: 8px;
+    font-weight: 600; cursor: pointer; margin-top: 20px;
+  }
+  .cta:hover { background: #d01725; }
+
+  .tiles.small-illustrations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; margin: 40px auto; max-width: 1000px; text-align: center;
+  }
+  .tiles.small-illustrations .tile {
+    background: #fff; padding: 20px; border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+  .tiles.small-illustrations img {
+    width: 80px; height: 80px; margin-bottom: 10px; border-radius: 8px;
+  }
+  .tiles.small-illustrations h4 {
+    margin-bottom: 8px; color: #EA1B2C; font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .tiles.small-illustrations {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+  }
+
+  .pricing-section { padding: 80px 5%; text-align: center; background: #fafafa; }
+  .pricing-cards {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;
+  }
+  .price-card {
+    background: #fff; border: 1px solid #eee; padding: 30px 20px;
+    border-radius: 12px; max-width: 300px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
+  .price-card.highlighted {
+    border: 2px solid #EA1B2C; box-shadow: 0 15px 40px rgba(234,27,44,0.15);
+  }
+  .note { margin-top: 20px; color: #555; }
+
+  @media (max-width: 768px) {
+    .pricing-section { padding: 60px 5%; }
+    .pricing-cards { flex-direction: column; align-items: center; }
+    .price-card { max-width: 100%; width: 100%; }
+  }
+
+  .closing {
+    padding: 80px 5%; text-align: center; background: #fff;
+  }
+  .closing h2 { font-size: 2rem; margin-bottom: 20px; }
+  .closing p {
+    color: #333; max-width: 700px; margin: 0 auto 30px;
+    font-size: 1.1rem; line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .closing { padding: 60px 5%; }
+    .closing h2 { font-size: 1.5rem; }
+    .closing p { font-size: 1rem; }
+  }
+</style>
 
 {% endblock %}
