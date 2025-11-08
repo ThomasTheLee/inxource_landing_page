@@ -3,7 +3,7 @@
   <component name="de.achimonline.quickjinja.settings.QuickJinjaProjectSettingsState">
     <option name="settings">
       <QuickJinjaProjectSettings>
-        <option name="templateFilePath" value="$PROJECT_DIR$/templates/user_guide.html" />
+        <option name="templateFilePath" value="$PROJECT_DIR$/templates/base.html" />
       </QuickJinjaProjectSettings>
     </option>
   </component>
