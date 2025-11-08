@@ -3,11 +3,24 @@ load_dotenv()
 import os
 from flask import Flask, render_template, request, jsonify
 from communication import Communication
+from flask_compress import Compress
+
+
 
 app = Flask(__name__)
-
+Compress(app)
 email_user = os.getenv('EMAIL_USER')
 email_password = os.getenv('EMAIL_KEY')
+
+
+@app.after_request
+def add_header(response):
+    if request.path.startswith('/static/'):
+        response.headers["Cache-Control"] = "public, max-age=31536000"  # 1 year
+    else:
+        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    return response
+
 
 
 @app.context_processor

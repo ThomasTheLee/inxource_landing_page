@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Inxource - Turn Data into your fastest competitive advantage{% endblock %}</title>
+
+
     <style>
         * {
             margin: 0;
@@ -134,6 +136,45 @@
             background: #000;
             color: #fff;
             border-color: #000;
+            font-size: 16px;
+            padding: 10px 24px;
+            font-weight: 600;
+        }
+
+        /* Floating User Guide Button */
+        .floating-guide-btn {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: linear-gradient(135deg, #EA1B2C 0%, #ff3344 100%);
+            color: #fff;
+            padding: 16px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            box-shadow: 0 8px 24px rgba(234, 27, 44, 0.4);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-guide-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(234, 27, 44, 0.5);
+            background: linear-gradient(135deg, #ff2233 0%, #ff4455 100%);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         /* Hero Section */
@@ -575,8 +616,8 @@
 
         .cta-form {
             display: flex;
-            justify-content: center; /* centers horizontally */
-            align-items: center;     /* centers vertically if the form has height */
+            justify-content: center;
+            align-items: center;
         }
 
         .cta-input {
@@ -596,7 +637,7 @@
             font-size: 14px;
             cursor: pointer;
             font-weight: 600;
-            display: inline-block; /* ensures button respects padding */
+            display: inline-block;
             text-align: center;
         }
 
@@ -629,9 +670,15 @@
                 flex-direction: column;
             }
 
-            /* Mobile: Show guide link beside logo */
             .logo-guide {
                 display: block;
+            }
+
+            .floating-guide-btn {
+                bottom: 20px;
+                right: 20px;
+                padding: 14px 22px;
+                font-size: 14px;
             }
         }
 
@@ -707,8 +754,20 @@
 
         {% block extra_css %}{% endblock %}
     </style>
+    <link rel="preload" as="image" href="{{ url_for('static', filename='images/woman_bakery.webp') }}">
+    <link rel="preload" as="image" href="{{ url_for('static', filename='images/shoe store.webp') }}">
+    <link rel="preload" as="image" href="{{ url_for('static', filename='images/pos.webp') }}">
+    <link rel="preload" as="image" href="{{ url_for('static', filename='images/inxource logo.webp') }}">
+    <link rel="preload" as="image" href="{{ url_for('static', filename='images/leny.gif') }}">
 </head>
 <body>
+    <!-- Floating User Guide Button -->
+    {% if active_tab == 'sme' %}
+    <a href="{{ url_for('user_guide') }}" class="floating-guide-btn">
+        User Guide
+    </a>
+    {% endif %}
+
     <div class="sticky-header">
         <div class="container">
             <nav>
@@ -721,21 +780,8 @@
                 <ul class="nav-links">
                     {% if active_tab == 'enterprise' %}
                     <li><a href="{{ url_for('enterprise') }}#home" class="nav-link">Home</a></li>
-                    <li><a href="{{ url_for('enterprise') }}#features" class="nav-link">Features</a></li>
-                    <li><a href="{{ url_for('enterprise') }}#case-studies" class="nav-link">Case Studies</a></li>
-                    <li><a href="{{ url_for('enterprise') }}#pricing" class="nav-link">Pricing</a></li>
-                    <li><a href="{{ url_for('enterprise') }}#faqs" class="nav-link">FAQs</a></li>
                     {% else %}
                     <li><a href="{{ url_for('index') }}#home" class="nav-link">Home</a></li>
-                    <li><a href="{{ url_for('index') }}#features" class="nav-link">Features</a></li>
-                    <li><a href="{{ url_for('index') }}#testimonials" class="nav-link">Testimonials</a></li>
-                    <li><a href="{{ url_for('index') }}#pricing" class="nav-link">Pricing</a></li>
-                    <li><a href="{{ url_for('index') }}#faqs" class="nav-link">FAQs</a></li>
-                    {% endif %}
-                    {% if active_tab == 'sme' %}
-                    <li>
-                        <a href="{{ url_for('user_guide') }}" class="nav-link guide-link show">User Guide</a>
-                    </li>
                     {% endif %}
                     {% if active_tab == 'sme' %}
                     <li>
@@ -788,7 +834,6 @@
           and share your ideas directly with our team.
         </h2>
         <form class="cta-form" style="margin-top: 20px;">
-          <!--<input type="email" class="cta-input" placeholder="Enter your mobile">-->
           <button type="button" class="cta-submit" onclick="window.open('{{ whatsapp_link }}', '_blank')"
                   style="background: #EA1B2C; color: #fff; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 700; cursor: pointer;">
             Join WhatsApp Group
@@ -810,29 +855,25 @@ document.addEventListener('DOMContentLoaded', function() {
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
 
-            // Close all FAQ items
             faqItems.forEach(faq => faq.classList.remove('active'));
 
-            // Open clicked item if it wasn't active
             if (!isActive) {
                 item.classList.add('active');
             }
         });
     });
 });
-// scrolling functions
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scroll for anchor links on the same page
     document.querySelectorAll('a.nav-link').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             const targetId = href.split('#')[1];
             const targetElement = document.getElementById(targetId);
 
-            // If target exists on current page, smooth scroll to it
             if (targetElement) {
                 e.preventDefault();
-                const headerOffset = 160; // Adjust for sticky header height
+                const headerOffset = 160;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -841,11 +882,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
             }
-            // Otherwise, let the link navigate normally (will go to index page with hash)
         });
     });
 
-    // Handle scrolling to section on page load if hash exists
     if (window.location.hash) {
         setTimeout(function() {
             const targetId = window.location.hash.substring(1);
@@ -861,7 +900,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
             }
-        }, 100); // Small delay to ensure page is fully loaded
+        }, 100);
     }
 });
 </script>
