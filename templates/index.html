@@ -5,141 +5,151 @@
 {% block content %}
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<!-- HERO with animated gradient + FAST image slider -->
-<section id="home" class="hero gradient-hero">
-  <div class="section-container fixed">
-    <div class="text" data-aos="fade-up">
-      <h1>Manage Your Business with Clarity</h1>
-      <p>
-        When you can see your business clearly, you make better choices.
-        Inxource helps you understand what's happening in real time —
-        from sales and customers to growth trends — so you can manage confidently, anywhere, anytime.
-      </p>
-      <button
-        class="cta"
-        onclick="document.getElementById('why-data-matters').scrollIntoView({behavior:'smooth'})"
-      >
-        See How Inxource Helps
-      </button>
-    </div>
-
-    <!-- FAST carousel using your previous images -->
-    <div class="hero-carousel" aria-label="Business examples">
-      <div class="track">
-        <img src="{{ url_for('static', filename='images/woman_bakery.png') }}" alt="Bakery owner" />
-        <img src="{{ url_for('static', filename='images/shoe store.png') }}" alt="Shoe store owner" />
-        <img src="{{ url_for('static', filename='images/flower girl.png') }}" alt="Flower seller" />
-        <img src="{{ url_for('static', filename='images/cake couple.png') }}" alt="Cake order" />
-        <img src="{{ url_for('static', filename='images/barber saloon.png') }}" alt="Barber & salon" />
-        <img src="{{ url_for('static', filename='images/chitenges.png') }}" alt="Clothing shop" />
-      </div>
-    </div>
-  </div>
-
-  <!-- Soft transition to next section -->
-  <div class="section-wave wave-bottom" aria-hidden="true">
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,0 C240,120 1200,0 1440,100 L1440,120 L0,120 Z"></path></svg>
-  </div>
-</section>
-
-<section id="why-data-matters" class="section">
-  <div class="section-container">
-    <div class="text" data-aos="fade-up">
-      <h2>As a Boss, You Deserve to Know Everything About Your Business</h2>
-      <p>
-        You can't manage what you can't see. Whether you're in the shop or away, get a clear, real-time view of your sales,
-        customers, and growth — anywhere, anytime, all without the math.
-      </p>
-    </div>
-  </div>
-  <div class="rotating-tiles" data-aos="fade-up" data-aos-delay="100">
-    <div class="tile active">
-      <img src="{{ url_for('static', filename='images/pos.png') }}" alt="Digital POS system" />
-      <h4>Record Every Sale Digitally</h4>
-      <p>Run your own built-in POS right from your phone — simple, fast, and made for your business.</p>
-    </div>
-
-    <div class="tile">
-      <img src="{{ url_for('static', filename='images/order link.png') }}" alt="Online store creation" />
-      <h4>Create Your Own Online Store</h4>
-      <p>Share your personalized order link and let customers buy your products or services anytime, from anywhere.</p>
-    </div>
-
-    <div class="tile">
-      <img src="{{ url_for('static', filename='images/lenny.png') }}" alt="AI business assistant Lenny" />
-      <h4>Just Ask Lenny</h4>
-      <p>No time to dig through numbers? Simply ask Lenny — your AI assistant that explains your business in seconds.</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="big-company-gap" class="section">
-  <div class="section-container fixed split-view">
-    <!-- Left Side: Big Business Problem -->
-    <div class="comparison-side" data-aos="fade-right">
-      <div class="visual">
-        <img src="{{ url_for('static', filename='images/big_business.png') }}" alt="Big company systems" />
-      </div>
-      <div class="text-compact">
-        <h3>Big Companies Have It Easy</h3>
-        <p>
-          Whole teams of data analysts. Expensive POS machines too bulky to move.
-          Complex systems that cost a fortune.
-        </p>
-        <p class="highlight">You don't need all that.</p>
-      </div>
-    </div>
-
-    <!-- Right Side: Inxource Solution -->
-    <div class="comparison-side" data-aos="fade-left">
-      <div class="visual">
-        <img src="{{ url_for('static', filename='images/analytics.png') }}" alt="Mobile analytics" />
-      </div>
-      <div class="text-compact">
-        <h3>You Get It All in Your Hands</h3>
-        <p>
-          See your analytics from your phone or PC. Anywhere, anytime.
-          No big team needed. No expensive hardware.
-        </p>
-        <p class="highlight">Just clarity and control.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="how-inxource-helps" class="section">
-  <div class="section-container">
-    <div class="text" data-aos="fade-up">
-      <h2>How Inxource Levels the Playing Field</h2>
-      <p>
-        <strong>Inxource</strong> helps you manage your business with the same clarity big companies rely on.
-        Even when you're not in the shop, every order, payment, and customer trend is tracked automatically —
-        so you always know what's happening, wherever you are.
-      </p>
-    </div>
-
-    <!-- 3D-style Animated Phone Mockup -->
-    <div class="phone-visual" data-aos="zoom-in">
-      <div class="phone-frame">
-        <div class="screen">
-          <div class="logo-bg"></div>
-          <div class="notification n1">📦 New Order from <strong>Thandi's Cakes</strong> – K320 (2 items)</div>
-          <div class="notification n2">💳 <strong>Joseph Mwila</strong> just paid – K210 confirmed</div>
-          <div class="notification n3">🚚 Delivery set for <strong>Maria's Boutique</strong> at 15:00</div>
-          <div class="notification n4">⭐ <strong>Gift Phiri</strong> just ordered again</div>
-          <div class="notification n5">📈 Sales up 22% today — great job!</div>
-          <div class="notification n6">🧾 New receipt for <strong>Chileshe's Hardware</strong></div>
-          <div class="notification n7">💬 "Quick service, thank you!" – <strong>Linda K.</strong></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <style>
+  :root{
+    --inx-red:#EA1B2C; --ink-red-dark:#d01725;
+    --text-dark:#111; --text:#333; --muted:#555;
+    --card:#fff; --alt:#fff;
+  }
+  body{font-family:'Open Sans',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;}
+  h1,h2,h3,h4{font-family:'Poppins','Open Sans',sans-serif;}
+
+  .section-container{display:flex;align-items:center;justify-content:space-between;gap:60px;max-width:1200px;margin:auto;padding:80px 5%;}
+  .section-container.fixed{min-height:520px;}
+  .text{flex:1;min-width:320px;}
+  .visual{flex:1;display:flex;justify-content:center;align-items:center;}
+  .visual img{max-width:100%;height:auto;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+
+  /* Animated gradient hero */
+  .gradient-hero{
+    position:relative; overflow:hidden; color:#fff;
+    background: radial-gradient(1200px 600px at -10% -10%, rgba(234,27,44,.35), transparent 60%),
+                radial-gradient(1200px 800px at 110% 10%, rgba(0,0,0,.25), transparent 55%),
+                linear-gradient(120deg, #0e0e0f, #151517 40%, #0e0e0f 80%);
+    animation: hueShift 12s ease-in-out infinite alternate;
+  }
+  @keyframes hueShift{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(-12deg)}}
+  .gradient-hero h1,.gradient-hero p{color:#fff}
+  .gradient-hero .cta{background:#fff;color:#000}
+  .gradient-hero .cta:hover{background:#f2f2f2}
+
+  /* HERO carousel (FIXED - now works as slideshow) */
+  .hero-carousel{
+    flex:1;
+    max-width:600px;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    height:480px;
+    border-radius:14px;
+    background:transparent;
+  }
+  .hero-carousel .track{
+    display:flex;
+    height:100%;
+    transition:transform 0.6s ease-in-out;
+    background:transparent;
+  }
+  .hero-carousel img{
+    min-width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:14px;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+    flex-shrink:0;
+    display:block;
+  }
+
+  /* 3D Rotating Carousel */
+  .rotating-tiles{
+    position:relative;
+    margin:60px auto 100px;
+    max-width:900px;
+    min-height:500px;
+    text-align:center;
+    padding:0 5%;
+    perspective:1200px;
+  }
+
+  .rotating-tiles .tile{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    max-width:350px;
+    transform-style:preserve-3d;
+    transition:transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1),
+                opacity 0.8s ease,
+                z-index 0s 0.4s;
+    pointer-events:none;
+  }
+
+  /* Center/Active tile - MUCH BIGGER and in front */
+  .rotating-tiles .tile.active{
+    transform:translate(-50%, -50%) translateZ(0px) scale(1.35);
+    opacity:1;
+    z-index:3;
+    pointer-events:auto;
+  }
+
+  /* Left tile - much smaller and to the left */
+  .rotating-tiles .tile.left{
+    transform:translate(-50%, -50%) translateX(-280px) translateZ(-150px) rotateY(25deg) scale(0.7);
+    opacity:0.5;
+    z-index:1;
+  }
+
+  /* Right tile - much smaller and to the right */
+  .rotating-tiles .tile.right{
+    transform:translate(-50%, -50%) translateX(280px) translateZ(-150px) rotateY(-25deg) scale(0.7);
+    opacity:0.5;
+    z-index:1;
+  }
+
+  .rotating-tiles img{
+    width:100%;
+    max-width:280px;
+    height:auto;
+    margin:0 auto 35px;
+    border-radius:12px;
+    display:block;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    transition:box-shadow 0.3s ease;
+  }
+  .rotating-tiles .tile.active img{
+    box-shadow:0 6px 16px rgba(0,0,0,.12);
+  }
+  .rotating-tiles h4{
+    margin-bottom:10px;
+    color:#000;
+    font-weight:700;
+    font-size:1.3rem;
+    transition:font-size 0.3s ease, opacity 0.3s ease;
+  }
+  .rotating-tiles .tile.active h4{
+    font-size:1.6rem;
+    opacity:1;
+  }
+  /* Hide text on side tiles */
+  .rotating-tiles .tile.left h4,
+  .rotating-tiles .tile.right h4,
+  .rotating-tiles .tile.left p,
+  .rotating-tiles .tile.right p{
+    opacity:0;
+    visibility:hidden;
+  }
+  .rotating-tiles p{
+    font-size:1.05rem;
+    color:#000;
+    max-width:400px;
+    margin:0 auto;
+    transition:opacity 0.3s ease;
+  }
+  .rotating-tiles .tile.active p{
+    opacity:1;
+  }
+
+  /* Phone visual section */
   .phone-visual {
     flex: 1;
     display: flex;
@@ -222,405 +232,13 @@
   .n6 { animation-delay: 15s; }
   .n7 { animation-delay: 18s; }
 
-  @media (max-width: 768px) {
-    .section-container {flex-direction: column; text-align: center; gap: 25px; padding:50px 5%;}
-    .phone-frame {width: 200px; height: 380px; transform: rotateY(0); padding:10px;}
-    .notification {font-size: 0.75rem; width: 240px; margin-left: -10px; padding:10px 16px;}
-    .phone-visual{min-width:100%; padding:20px 0;}
-  }
-</style>
-
-
-
-
-<section id="lenny-ai" class="section">
-  <div class="section-container">
-    <div class="text" data-aos="fade-right">
-      <h2>What If You're Tired and Just Want to Rest?</h2>
-      <p>
-        Sometimes you're tired or busy — you just want answers fast. That's why we built <strong>Lenny</strong>, your AI business companion.
-        Ask her things like, "How much did we sell today?" or "Why are sales lower this week?" and she'll tell you instantly —
-        clear, simple, and human.
-      </p>
-    </div>
-    <div class="visual" data-aos="fade-left">
-      <img src="{{ url_for('static', filename='images/leny.gif') }}"
-           alt="Animated illustration of Lenny AI assistant helping business owner"
-           class="lenny-gif" />
-    </div>
-  </div>
-</section>
-
-<style>
+  /* Lenny GIF */
   .lenny-gif {
     width: 100%;
     max-width: 420px;
     border-radius: 10px;
     box-shadow: none;
     outline: none;
-  }
-
-  .visual {
-    text-align: center;
-  }
-
-  @media (max-width: 768px) {
-    .lenny-gif {
-      max-width: 90%;
-    }
-  }
-</style>
-
-
-
-<section id="stats" class="section stats">
-  <div class="section-container" data-aos="fade-up">
-    <div class="review-block">
-      <div class="stars">
-        ★★★★★
-      </div>
-      <h3 class="rating-text">Loved by business owners across Zambia</h3>
-      <p class="review-subtext">
-        Trusted by SMEs who use InXource daily to track sales, understand customers, and grow with clarity.
-      </p>
-    </div>
-  </div>
-</section>
-
-<style>
-  .stats {
-    background: #fff;
-    padding: 80px 5%;
-    text-align: center;
-  }
-
-  .review-block {
-    max-width: 700px;
-    margin: auto;
-  }
-
-  .stars {
-    font-size: 2.2rem;
-    color: #FFD700;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-  }
-
-  .rating-text {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 10px;
-  }
-
-  .review-subtext {
-    color: #444;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 768px) {
-    .rating-text {
-      font-size: 1.2rem;
-    }
-    .stars {
-      font-size: 1.6rem;
-    }
-    .review-subtext{
-      font-size:0.98rem;
-      padding:0 10px;
-    }
-    .stats{
-      padding:60px 5%;
-    }
-  }
-</style>
-
-
-<section id="pricing" class="pricing-section">
-  <h2 data-aos="fade-up">Simple, Transparent Pricing</h2>
-  <div class="pricing-cards" data-aos="zoom-in">
-    <div class="price-card">
-      <h3>Starter Plan</h3>
-      <p><strong>K25</strong> for 2 weeks — full access to all features.</p>
-    </div>
-    <div class="price-card highlighted">
-      <h3>3-Year Growth Plan</h3>
-      <p><strong>K1,000</strong> for 3 years — best value for growing SMEs.</p>
-    </div>
-  </div>
-  <p class="note" data-aos="fade-up" data-aos-delay="100">No hidden fees. No complicated tiers. Just fairness for real business owners who matter.</p>
-</section>
-
-<section id="closing-message" class="closing">
-  <h2 data-aos="fade-up">You've done the hard work. Let Inxource make it easier.</h2>
-  <p data-aos="fade-up" data-aos-delay="100">
-    Your dream keeps the world turning. Every sale, every customer, every late night — it matters.
-    Inxource was built to make your journey smoother, your business clearer, and your growth inevitable.
-  </p>
-  <button class="cta" onclick="window.open('{{ inxource_dashboard }}','_blank')" data-aos="zoom-in">Get Started</button>
-</section>
-
-<a href="{{ inxource_dashboard }}" target="_blank" rel="noopener" class="floating-cta">Get Started</a>
-
-<style>
-  :root{
-    --inx-red:#EA1B2C; --ink-red-dark:#d01725;
-    --text-dark:#111; --text:#333; --muted:#555;
-    --card:#fff; --alt:#fff;
-  }
-  body{font-family:'Open Sans',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;}
-  h1,h2,h3,h4{font-family:'Poppins','Open Sans',sans-serif;}
-
-  .section-container{display:flex;align-items:center;justify-content:space-between;gap:60px;max-width:1200px;margin:auto;padding:80px 5%;}
-  .section-container.fixed{min-height:520px;}
-  .text{flex:1;min-width:320px;}
-  .visual{flex:1;display:flex;justify-content:center;align-items:center;}
-  .visual img{max-width:100%;height:auto;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
-
-  /* Animated gradient hero */
-  .gradient-hero{
-    position:relative; overflow:hidden; color:#fff;
-    background: radial-gradient(1200px 600px at -10% -10%, rgba(234,27,44,.35), transparent 60%),
-                radial-gradient(1200px 800px at 110% 10%, rgba(0,0,0,.25), transparent 55%),
-                linear-gradient(120deg, #0e0e0f, #151517 40%, #0e0e0f 80%);
-    animation: hueShift 12s ease-in-out infinite alternate;
-  }
-  @keyframes hueShift{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(-12deg)}}
-  .gradient-hero h1,.gradient-hero p{color:#fff}
-  .gradient-hero .cta{background:#fff;color:#000}
-  .gradient-hero .cta:hover{background:#f2f2f2}
-
-  /* HERO carousel (FIXED - now works as slideshow) */
-  .hero-carousel{
-    flex:1;
-    max-width:600px;
-    width:100%;
-    position:relative;
-    overflow:hidden;
-    height:480px;
-    border-radius:14px;
-    background:transparent;
-  }
-  .hero-carousel .track{
-    display:flex;
-    height:100%;
-    transition:transform 0.6s ease-in-out;
-    background:transparent;
-  }
-  .hero-carousel img{
-    min-width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:14px;
-    box-shadow:0 2px 10px rgba(0,0,0,.15);
-    flex-shrink:0;
-    display:block;
-  }
-
-  @media (max-width: 768px){
-    .gradient-hero{background:#fff !important; color:#111 !important;}
-    .gradient-hero h1,.gradient-hero p{color:#111 !important;}
-    .gradient-hero .cta{background:var(--inx-red) !important; color:#fff !important;}
-    .gradient-hero .cta:hover{background:var(--ink-red-dark) !important;}
-    .gradient-hero .section-wave{display:none;}
-
-    .hero-carousel{display:none;}
-
-    .section-container{flex-direction:column;gap:30px;padding:60px 5%;}
-    .section-container.fixed{min-height:auto;}
-    h1{font-size:1.9rem} h2{font-size:1.5rem}
-  }
-
-  /* 3D Rotating Carousel */
-  .rotating-tiles{
-    position:relative;
-    margin:60px auto 100px;
-    max-width:900px;
-    min-height:500px;
-    text-align:center;
-    padding:0 5%;
-    perspective:1200px;
-  }
-
-  /* Mobile hero carousel - hidden on desktop */
-  .mobile-hero-carousel{
-    display:none;
-  }
-
-  @media (max-width: 768px){
-    .mobile-hero-carousel{
-      display:block;
-      position:relative;
-      margin:30px auto 60px;
-      max-width:100%;
-      min-height:280px;
-      text-align:center;
-      padding:0 5%;
-      perspective:800px;
-    }
-
-    .mobile-hero-carousel .tile{
-      position:absolute;
-      top:50%;
-      left:50%;
-      width:100%;
-      max-width:240px;
-      transform-style:preserve-3d;
-      transition:transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1),
-                  opacity 0.8s ease,
-                  z-index 0s 0.4s;
-      pointer-events:none;
-    }
-
-    .mobile-hero-carousel .tile.active{
-      transform:translate(-50%, -50%) translateZ(0px) scale(1);
-      opacity:1;
-      z-index:3;
-      pointer-events:auto;
-    }
-
-    .mobile-hero-carousel .tile.left{
-      transform:translate(-50%, -50%) translateX(-140px) translateZ(-80px) rotateY(20deg) scale(0.55);
-      opacity:0.4;
-      z-index:1;
-    }
-
-    .mobile-hero-carousel .tile.right{
-      transform:translate(-50%, -50%) translateX(140px) translateZ(-80px) rotateY(-20deg) scale(0.55);
-      opacity:0.4;
-      z-index:1;
-    }
-
-    .mobile-hero-carousel img{
-      width:100%;
-      max-width:240px;
-      height:auto;
-      margin:0 auto;
-      border-radius:10px;
-      display:block;
-      box-shadow:0 3px 10px rgba(0,0,0,.08);
-      transition:box-shadow 0.3s ease;
-    }
-
-    .mobile-hero-carousel .tile.active img{
-      box-shadow:0 4px 12px rgba(0,0,0,.1);
-    }
-  }
-  .rotating-tiles .tile{
-    position:absolute;
-    top:50%;
-    left:50%;
-    width:100%;
-    max-width:350px;
-    transform-style:preserve-3d;
-    transition:transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1),
-                opacity 0.8s ease,
-                z-index 0s 0.4s;
-    pointer-events:none;
-  }
-
-  /* Center/Active tile - MUCH BIGGER and in front */
-  .rotating-tiles .tile.active{
-    transform:translate(-50%, -50%) translateZ(0px) scale(1.35);
-    opacity:1;
-    z-index:3;
-    pointer-events:auto;
-  }
-
-  /* Left tile - much smaller and to the left */
-  .rotating-tiles .tile.left{
-    transform:translate(-50%, -50%) translateX(-280px) translateZ(-150px) rotateY(25deg) scale(0.7);
-    opacity:0.5;
-    z-index:1;
-  }
-
-  /* Right tile - much smaller and to the right */
-  .rotating-tiles .tile.right{
-    transform:translate(-50%, -50%) translateX(280px) translateZ(-150px) rotateY(-25deg) scale(0.7);
-    opacity:0.5;
-    z-index:1;
-  }
-
-  .rotating-tiles img{
-    width:100%;
-    max-width:280px;
-    height:auto;
-    margin:0 auto 35px;
-    border-radius:12px;
-    display:block;
-    box-shadow:0 4px 12px rgba(0,0,0,.1);
-    transition:box-shadow 0.3s ease;
-  }
-  .rotating-tiles .tile.active img{
-    box-shadow:0 6px 16px rgba(0,0,0,.12);
-  }
-  .rotating-tiles h4{
-    margin-bottom:10px;
-    color:#000;
-    font-weight:700;
-    font-size:1.3rem;
-    transition:font-size 0.3s ease, opacity 0.3s ease;
-  }
-  .rotating-tiles .tile.active h4{
-    font-size:1.6rem;
-    opacity:1;
-  }
-  /* Hide text on side tiles */
-  .rotating-tiles .tile.left h4,
-  .rotating-tiles .tile.right h4,
-  .rotating-tiles .tile.left p,
-  .rotating-tiles .tile.right p{
-    opacity:0;
-    visibility:hidden;
-  }
-  .rotating-tiles p{
-    font-size:1.05rem;
-    color:#000;
-    max-width:400px;
-    margin:0 auto;
-    transition:opacity 0.3s ease;
-  }
-  .rotating-tiles .tile.active p{
-    opacity:1;
-  }
-
-  @media (max-width: 768px){
-    .rotating-tiles{
-      min-height:320px;
-      perspective:700px;
-      margin:40px auto 60px;
-    }
-    .rotating-tiles .tile{
-      max-width:240px;
-    }
-    .rotating-tiles .tile.active{
-      transform:translate(-50%, -50%) translateZ(0px) scale(1.1);
-    }
-    .rotating-tiles .tile.left{
-      transform:translate(-50%, -50%) translateX(-140px) translateZ(-80px) rotateY(18deg) scale(0.5);
-      opacity:0.4;
-    }
-    .rotating-tiles .tile.right{
-      transform:translate(-50%, -50%) translateX(140px) translateZ(-80px) rotateY(-18deg) scale(0.5);
-      opacity:0.4;
-    }
-    .rotating-tiles img{
-      max-width:220px;
-      margin-bottom:20px;
-    }
-    .rotating-tiles h4{
-      font-size:1.15rem;
-    }
-    .rotating-tiles .tile.active h4{
-      font-size:1.35rem;
-    }
-    .rotating-tiles p{
-      font-size:0.95rem;
-      padding:0 10px;
-    }
   }
 
   /* Split comparison view */
@@ -688,10 +306,38 @@
   .wave-bottom path,.wave-top path{fill:#fff;}
 
   /* Stats */
-  .stats .section-container{justify-content:center;gap:80px;}
-  .stats .stat{text-align:center}
-  .stats .num{font:700 44px/1 'Poppins',sans-serif;color:var(--text-dark)}
-  .stats .label{color:var(--muted);font-weight:600;margin-top:6px}
+  .stats {
+    background: #fff;
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+  .review-block {
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .stars {
+    font-size: 2.2rem;
+    color: #FFD700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+  }
+
+  .rating-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+  }
+
+  .review-subtext {
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
 
   /* Typography & buttons */
   h1,h2{color:var(--text-dark);margin-bottom:18px}
@@ -710,18 +356,6 @@
   .closing h2{font-size:2rem;margin-bottom:16px}
   .closing p{color:#333;max-width:720px;margin:0 auto 26px;font-size:1.08rem;line-height:1.7}
 
-  @media (max-width: 768px){
-    .pricing-section{padding:60px 5%;}
-    .pricing-section h2{font-size:1.4rem;}
-    .price-card{padding:25px 18px; max-width:280px;}
-    .price-card h3{font-size:1.15rem;}
-    .price-card p{font-size:0.95rem;}
-    .pricing-section .note{font-size:0.95rem; padding:0 10px;}
-    .closing{padding:60px 5%;}
-    .closing h2{font-size:1.5rem;}
-    .closing p{font-size:1rem; padding:0 5px;}
-  }
-
   /* Floating CTA */
   .floating-cta{
     position:fixed; right:22px; bottom:22px; padding:12px 18px; border-radius:999px;
@@ -730,13 +364,60 @@
   }
   .floating-cta:hover{background:var(--ink-red-dark);transform:translateY(-2px)}
 
+  /* Mobile Responsive */
   @media (max-width: 768px){
-    .floating-cta{
-      right:15px; bottom:15px; padding:10px 15px; font-size:0.9rem;
-    }
-  }
+    .gradient-hero{background:#fff !important; color:#111 !important;}
+    .gradient-hero h1,.gradient-hero p{color:#111 !important;}
+    .gradient-hero .cta{background:var(--inx-red) !important; color:#fff !important;}
+    .gradient-hero .cta:hover{background:var(--ink-red-dark) !important;}
+    .gradient-hero .section-wave{display:none;}
 
-  @media (max-width: 768px) {
+    .hero-carousel{display:none;}
+
+    .section-container{flex-direction:column;gap:30px;padding:60px 5%;}
+    .section-container.fixed{min-height:auto;}
+    h1{font-size:1.9rem} h2{font-size:1.5rem}
+
+    .phone-frame {width: 200px; height: 380px; transform: rotateY(0); padding:10px;}
+    .notification {font-size: 0.75rem; width: 240px; margin-left: -10px; padding:10px 16px;}
+    .phone-visual{min-width:100%; padding:20px 0;}
+
+    .lenny-gif {max-width: 90%;}
+
+    .rotating-tiles{
+      min-height:320px;
+      perspective:700px;
+      margin:40px auto 60px;
+    }
+    .rotating-tiles .tile{
+      max-width:240px;
+    }
+    .rotating-tiles .tile.active{
+      transform:translate(-50%, -50%) translateZ(0px) scale(1.1);
+    }
+    .rotating-tiles .tile.left{
+      transform:translate(-50%, -50%) translateX(-140px) translateZ(-80px) rotateY(18deg) scale(0.5);
+      opacity:0.4;
+    }
+    .rotating-tiles .tile.right{
+      transform:translate(-50%, -50%) translateX(140px) translateZ(-80px) rotateY(-18deg) scale(0.5);
+      opacity:0.4;
+    }
+    .rotating-tiles img{
+      max-width:220px;
+      margin-bottom:20px;
+    }
+    .rotating-tiles h4{
+      font-size:1.15rem;
+    }
+    .rotating-tiles .tile.active h4{
+      font-size:1.35rem;
+    }
+    .rotating-tiles p{
+      font-size:0.95rem;
+      padding:0 10px;
+    }
+
     .section-container.split-view {
       flex-direction: column;
       gap: 40px;
@@ -751,14 +432,231 @@
     .text-compact p{
       font-size:0.98rem;
     }
+
+    .rating-text {
+      font-size: 1.2rem;
+    }
+    .stars {
+      font-size: 1.6rem;
+    }
+    .review-subtext{
+      font-size:0.98rem;
+      padding:0 10px;
+    }
+    .stats{
+      padding:60px 5%;
+    }
+
+    .pricing-section{padding:60px 5%;}
+    .pricing-section h2{font-size:1.4rem;}
+    .price-card{padding:25px 18px; max-width:280px;}
+    .price-card h3{font-size:1.15rem;}
+    .price-card p{font-size:0.95rem;}
+    .pricing-section .note{font-size:0.95rem; padding:0 10px;}
+    .closing{padding:60px 5%;}
+    .closing h2{font-size:1.5rem;}
+    .closing p{font-size:1rem; padding:0 5px;}
+
+    .floating-cta{
+      right:15px; bottom:15px; padding:10px 15px; font-size:0.9rem;
+    }
   }
 </style>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true });
+<!-- HERO with animated gradient + FAST image slider -->
+<section id="home" class="hero gradient-hero">
+  <div class="section-container fixed">
+    <div class="text">
+      <h1>Manage Your Business with Clarity</h1>
+      <p>
+        When you can see your business clearly, you make better choices.
+        Inxource helps you understand what's happening in real time —
+        from sales and customers to growth trends — so you can manage confidently, anywhere, anytime.
+      </p>
+      <button
+        class="cta"
+        onclick="document.getElementById('why-data-matters').scrollIntoView({behavior:'smooth'})"
+      >
+        See How Inxource Helps
+      </button>
+    </div>
 
-  // FIXED carousel logic: smooth slideshow transition every 3s
+    <!-- FAST carousel using your previous images -->
+    <div class="hero-carousel" aria-label="Business examples">
+      <div class="track">
+        <img src="{{ url_for('static', filename='images/woman_bakery.png') }}" alt="Bakery owner" />
+        <img src="{{ url_for('static', filename='images/shoe store.png') }}" alt="Shoe store owner" />
+        <img src="{{ url_for('static', filename='images/flower girl.png') }}" alt="Flower seller" />
+        <img src="{{ url_for('static', filename='images/cake couple.png') }}" alt="Cake order" />
+        <img src="{{ url_for('static', filename='images/barber saloon.png') }}" alt="Barber & salon" />
+        <img src="{{ url_for('static', filename='images/chitenges.png') }}" alt="Clothing shop" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Soft transition to next section -->
+  <div class="section-wave wave-bottom" aria-hidden="true">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,0 C240,120 1200,0 1440,100 L1440,120 L0,120 Z"></path></svg>
+  </div>
+</section>
+
+<section id="why-data-matters" class="section">
+  <div class="section-container">
+    <div class="text">
+      <h2>As a Boss, You Deserve to Know Everything About Your Business</h2>
+      <p>
+        You can't manage what you can't see. Whether you're in the shop or away, get a clear, real-time view of your sales,
+        customers, and growth — anywhere, anytime, all without the math.
+      </p>
+    </div>
+  </div>
+  <div class="rotating-tiles">
+    <div class="tile active">
+      <img src="{{ url_for('static', filename='images/pos.png') }}" alt="Digital POS system" />
+      <h4>Record Every Sale Digitally</h4>
+      <p>Run your own built-in POS right from your phone — simple, fast, and made for your business.</p>
+    </div>
+
+    <div class="tile">
+      <img src="{{ url_for('static', filename='images/order link.png') }}" alt="Online store creation" />
+      <h4>Create Your Own Online Store</h4>
+      <p>Share your personalized order link and let customers buy your products or services anytime, from anywhere.</p>
+    </div>
+
+    <div class="tile">
+      <img src="{{ url_for('static', filename='images/lenny.png') }}" alt="AI business assistant Lenny" />
+      <h4>Just Ask Lenny</h4>
+      <p>No time to dig through numbers? Simply ask Lenny — your AI assistant that explains your business in seconds.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="big-company-gap" class="section">
+  <div class="section-container fixed split-view">
+    <!-- Left Side: Big Business Problem -->
+    <div class="comparison-side">
+      <div class="visual">
+        <img src="{{ url_for('static', filename='images/big_business.png') }}" alt="Big company systems" />
+      </div>
+      <div class="text-compact">
+        <h3>Big Companies Have It Easy</h3>
+        <p>
+          Whole teams of data analysts. Expensive POS machines too bulky to move.
+          Complex systems that cost a fortune.
+        </p>
+        <p class="highlight">You don't need all that.</p>
+      </div>
+    </div>
+
+    <!-- Right Side: Inxource Solution -->
+    <div class="comparison-side">
+      <div class="visual">
+        <img src="{{ url_for('static', filename='images/analytics.png') }}" alt="Mobile analytics" />
+      </div>
+      <div class="text-compact">
+        <h3>You Get It All in Your Hands</h3>
+        <p>
+          See your analytics from your phone or PC. Anywhere, anytime.
+          No big team needed. No expensive hardware.
+        </p>
+        <p class="highlight">Just clarity and control.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-inxource-helps" class="section">
+  <div class="section-container">
+    <div class="text">
+      <h2>How Inxource Levels the Playing Field</h2>
+      <p>
+        <strong>Inxource</strong> helps you manage your business with the same clarity big companies rely on.
+        Even when you're not in the shop, every order, payment, and customer trend is tracked automatically —
+        so you always know what's happening, wherever you are.
+      </p>
+    </div>
+
+    <!-- 3D-style Animated Phone Mockup -->
+    <div class="phone-visual">
+      <div class="phone-frame">
+        <div class="screen">
+          <div class="logo-bg"></div>
+          <div class="notification n1">📦 New Order from <strong>Thandi's Cakes</strong> – K320 (2 items)</div>
+          <div class="notification n2">💳 <strong>Joseph Mwila</strong> just paid – K210 confirmed</div>
+          <div class="notification n3">🚚 Delivery set for <strong>Maria's Boutique</strong> at 15:00</div>
+          <div class="notification n4">⭐ <strong>Gift Phiri</strong> just ordered again</div>
+          <div class="notification n5">📈 Sales up 22% today — great job!</div>
+          <div class="notification n6">🧾 New receipt for <strong>Chileshe's Hardware</strong></div>
+          <div class="notification n7">💬 "Quick service, thank you!" – <strong>Linda K.</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lenny-ai" class="section">
+  <div class="section-container">
+    <div class="text">
+      <h2>What If You're Tired and Just Want to Rest?</h2>
+      <p>
+        Sometimes you're tired or busy — you just want answers fast. That's why we built <strong>Lenny</strong>, your AI business companion.
+        Ask her things like, "How much did we sell today?" or "Why are sales lower this week?" and she'll tell you instantly —
+        clear, simple, and human.
+      </p>
+    </div>
+    <div class="visual">
+      <img src="{{ url_for('static', filename='images/leny.gif') }}"
+           alt="Animated illustration of Lenny AI assistant helping business owner"
+           class="lenny-gif" />
+    </div>
+  </div>
+</section>
+
+<section id="stats" class="section stats">
+  <div class="section-container">
+    <div class="review-block">
+      <div class="stars">
+        ★★★★★
+      </div>
+      <h3 class="rating-text">Loved by business owners across Zambia</h3>
+      <p class="review-subtext">
+        Trusted by SMEs who use InXource daily to track sales, understand customers, and grow with clarity.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing-section">
+  <h2>Simple, Transparent Pricing</h2>
+  <div class="pricing-cards">
+    <div class="price-card">
+      <h3>Starter Plan</h3>
+      <p><strong>K25</strong> for 2 weeks — full access to all features.</p>
+    </div>
+    <div class="price-card highlighted">
+      <h3>3-Year Growth Plan</h3>
+      <p><strong>K1,000</strong> for 3 years — best value for growing SMEs.</p>
+    </div>
+  </div>
+  <p class="note">No hidden fees. No complicated tiers. Just fairness for real business owners who matter.</p>
+</section>
+
+<section id="closing-message" class="closing">
+  <h2>You've done the hard work. Let Inxource make it easier.</h2>
+  <p>
+    Your dream keeps the world turning. Every sale, every customer, every late night — it matters.
+    Inxource was built to make your journey smoother, your business clearer, and your growth inevitable.
+  </p>
+  <button class="cta" onclick="window.open('{{ inxource_dashboard }}','_blank')">Get Started</button>
+</section>
+
+<a href="{{ inxource_dashboard }}" target="_blank" rel="noopener" class="floating-cta">Get Started</a>
+
+
+
+<script>
+  // HERO carousel: smooth slideshow transition every 3s
   const SLIDE_MS = 3000;
   const track = document.querySelector('.hero-carousel .track');
   if (track) {
@@ -821,33 +719,6 @@
       currentIndex = (currentIndex + 1) % tiles.length;
       updateTiles();
     }, 4000);
-  }
-
-  // Mobile hero carousel - same logic for hero images on mobile
-  const mobileHeroTiles = document.querySelectorAll('.mobile-hero-carousel .tile');
-  if (mobileHeroTiles.length > 0) {
-    let mobileCurrentIndex = 0;
-
-    function updateMobileHeroTiles() {
-      mobileHeroTiles.forEach((tile, index) => {
-        tile.classList.remove('active', 'left', 'right');
-
-        if (index === mobileCurrentIndex) {
-          tile.classList.add('active');
-        } else if (index === (mobileCurrentIndex - 1 + mobileHeroTiles.length) % mobileHeroTiles.length) {
-          tile.classList.add('left');
-        } else if (index === (mobileCurrentIndex + 1) % mobileHeroTiles.length) {
-          tile.classList.add('right');
-        }
-      });
-    }
-
-    updateMobileHeroTiles();
-
-    setInterval(() => {
-      mobileCurrentIndex = (mobileCurrentIndex + 1) % mobileHeroTiles.length;
-      updateMobileHeroTiles();
-    }, 3000);
   }
 </script>
 
