@@ -3,6 +3,28 @@
 {% block title %}Inxource - Your Complete Business Companion{% endblock %}
 
 {% block content %}
+<style>
+  .guide-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  /* Adjust floating button position to avoid overlap */
+  body {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .guide-image {
+      max-width: 100%;
+    }
+  }
+</style>
+
 <body>
 <header style="background: #000; color: #fff; padding: 50px 20px; text-align: center;">
   <h1>Welcome to the Inxource User Guide</h1>
@@ -15,10 +37,10 @@
   <section style="margin-bottom: 80px;">
     <h2>1. Getting Started with Inxource</h2>
     <p>
-      Every great business starts with clarity. When you sign up for Inxource, you’re not just creating an account — you’re building the command center for your business.
-      It takes only a few minutes to register your name, email, and password, and from that moment on, you’ll have your own dashboard — where everything that matters about your business lives.
+      Every great business starts with clarity. When you sign up for Inxource, you're not just creating an account — you're building the command center for your business.
+      It takes only a few minutes to register your name, email, and password, and from that moment on, you'll have your own dashboard — where everything that matters about your business lives.
     </p>
-    <img src="{{ url_for('static', filename='images/create account.png') }}" alt="User signing up to Inxource dashboard" style="width:100%; border-radius:10px; margin-top:20px;">
+    <img loading="lazy" src="{{ url_for('static', filename='images/create account.webp') }}" alt="User signing up to Inxource dashboard" class="guide-image">
   </section>
 
   <!-- 2. Payment Options -->
@@ -29,12 +51,12 @@
       <strong>Inxource Wallet</strong>, where your money stays secure with Tech Pay Zambia. Think of it as your digital business bank account — easy to manage, withdraw, and track.
     </p>
     <p>
-      Or, you can transact outside the wallet. Maybe you prefer direct mobile money or cash payments. That’s fine too.
-      Every order still shows up on your dashboard — you simply confirm it as “Paid.”
-      Either way, you’ll still enjoy the same data insights, analytics, and growth features.
+      Or, you can transact outside the wallet. Maybe you prefer direct mobile money or cash payments. That's fine too.
+      Every order still shows up on your dashboard — you simply confirm it as "Paid."
+      Either way, you'll still enjoy the same data insights, analytics, and growth features.
       The choice is yours — because flexibility is power.
     </p>
-    <img src="{{ url_for('static', filename='images/pay option.png') }}" alt="Wallet vs outside payment options" style="width:100%; border-radius:10px; margin-top:20px;">
+    <img loading="lazy" src="{{ url_for('static', filename='images/pay option.webp') }}" alt="Wallet vs outside payment options" class="guide-image">
   </section>
 
   <!-- 3. Managing Multiple Businesses -->
@@ -43,9 +65,9 @@
     <p>
       Whether you own a salon, a bakery, or a tech shop — Inxource lets you manage all of them under one account.
       You can add multiple businesses or store locations and monitor them all from a single dashboard.
-      It’s perfect for owners who wear many hats and need a full view of their empire at a glance.
+      It's perfect for owners who wear many hats and need a full view of their empire at a glance.
     </p>
-    <img src="{{ url_for('static', filename='images/create business.png') }}" alt="Multiple stores dashboard view" style="width:100%; border-radius:10px; margin-top:20px;">
+    <img loading="lazy" src="{{ url_for('static', filename='images/create business.webp') }}" alt="Multiple stores dashboard view" class="guide-image">
   </section>
 
   <!-- 4. Adding Products and Services -->
@@ -54,9 +76,9 @@
     <p>
       Your products are the heartbeat of your business — and Inxource helps them shine.
       You can create detailed listings with images, descriptions, and prices for each product or service.
-      Whether you’re selling shoes, braiding hair, or baking cakes, everything is organized beautifully for your customers to see.
+      Whether you're selling shoes, braiding hair, or baking cakes, everything is organized beautifully for your customers to see.
     </p>
-    <img src="{{ url_for('static', filename='images/create product.png') }}" alt="Product creation page" style="width:100%; border-radius:10px; margin-top:20px;">
+    <img loading="lazy" src="{{ url_for('static', filename='images/create product.webp') }}" alt="Product creation page" class="guide-image">
   </section>
 
   <!-- 5. Inventory Tracking -->
@@ -64,9 +86,9 @@
     <h2>5. Keep Track of Your Inventory Automatically</h2>
     <p>
       No more notebooks or guesswork. Every time you add products, Inxource tracks your inventory automatically.
-      When sales happen, your stock updates in real time. You’ll always know what’s selling fast, what’s running low, and what needs restocking — without lifting a finger.
+      When sales happen, your stock updates in real time. You'll always know what's selling fast, what's running low, and what needs restocking — without lifting a finger.
     </p>
-    <img src="{{ url_for('static', filename='images/inventory.png') }}" alt="Inventory tracking visualization" style="width:100%; border-radius:10px; margin-top:20px;">
+    <img loading="lazy" src="{{ url_for('static', filename='images/inventory.webp') }}" alt="Inventory tracking visualization" class="guide-image">
   </section>
 
   <!-- 6. Quick Sales Recording with POS -->
@@ -75,9 +97,9 @@
     <p>
       Every Inxource account includes its own internal <strong>Point of Sale (POS)</strong> system.
       With just a few clicks, you can record any sale that happens in-store — fast, clean, and secure.
-      Even when you’re busy, it takes less than 5 seconds to keep your data up to date.
+      Even when you're busy, it takes less than 5 seconds to keep your data up to date.
     </p>
-    <img src="{{ url_for('static', filename='images/pos.png') }}" alt="Inxource POS interface" style="width:100%; border-radius:10px; margin-top:20px;">
+    <img loading="lazy" src="{{ url_for('static', filename='images/pos.webp') }}" alt="Inxource POS interface" class="guide-image">
   </section>
 
   <!-- 7. Online Store and Order Links -->
@@ -88,7 +110,7 @@
       Share it with your customers on WhatsApp, Facebook, Instagram, or even print it as a QR code for your shop counter.
       Customers can browse your products, place orders, upload reference photos, and even add special instructions — all in one place.
     </p>
-    <img src="{{ url_for('static', filename='images/order link.png') }}" alt="Customer using online store link" style="width:100%; border-radius:10px; margin-top:20px;">
+    <img loading="lazy" src="{{ url_for('static', filename='images/order link.webp') }}" alt="Customer using online store link" class="guide-image">
   </section>
 
   <!-- 8. Fulfilling Orders and Analytics -->
@@ -96,14 +118,14 @@
     <h2>8. Fulfilling Orders and Understanding Your Growth</h2>
     <p>
       Every order appears instantly in your dashboard. Once you mark it as fulfilled, Inxource begins analyzing the data behind your business — automatically.
-      You’ll see which products perform best, who your repeat customers are, and where your profits come from.
+      You'll see which products perform best, who your repeat customers are, and where your profits come from.
     </p>
     <p>
       This is where the magic happens: your dashboard becomes your silent business advisor.
       You start seeing trends, spotting opportunities, and running your business with the same precision big companies enjoy.
       Because small businesses deserve smart tools too.
     </p>
-    <img src="{{ url_for('static', filename='images/order.png') }}" alt="Analytics dashboard showing growth trends" style="width:100%; border-radius:10px; margin-top:20px;">
+    <img loading="lazy" src="{{ url_for('static', filename='images/orders.webp') }}" alt="Analytics dashboard showing growth trends" class="guide-image">
   </section>
 
   <!-- 9. Meet Lenny AI -->
@@ -111,29 +133,29 @@
     <h2>9. Meet Lenny — Your AI Business Assistant</h2>
     <p>
       Lenny is your personal business companion — available anytime you need her.
-      You can ask questions like “How much did I sell today?” or “Why are my sales lower this week?”
-      She’ll give clear, data-backed answers instantly.
+      You can ask questions like "How much did I sell today?" or "Why are my sales lower this week?"
+      She'll give clear, data-backed answers instantly.
     </p>
     <p>
       Think of her as your in-house analyst, always ready to explain your numbers and guide your next move.
-      Even when you’re tired, you can simply talk to Lenny — and she’ll handle the thinking for you.
+      Even when you're tired, you can simply talk to Lenny — and she'll handle the thinking for you.
     </p>
-    <img src="{{ url_for('static', filename='images/lenny.png') }}" alt="AI assistant interacting with business owner" style="width:100%; border-radius:10px; margin-top:20px;">
+    <img loading="lazy" src="{{ url_for('static', filename='images/lenny.webp') }}" alt="AI assistant interacting with business owner" class="guide-image">
   </section>
 
   <!-- 10. Inxource Wallet and Withdrawals -->
   <section style="margin-bottom: 80px;">
     <h2>10. Your Inxource Wallet</h2>
     <p>
-      Your Inxource Wallet isn’t just a safe place for your money — it’s a smart way to build discipline.
+      Your Inxource Wallet isn't just a safe place for your money — it's a smart way to build discipline.
       Funds stay protected until you choose to withdraw them, giving you full control over your business finances.
-      When you’re ready, just request a withdrawal — and it’s processed quickly and securely.
+      When you're ready, just request a withdrawal — and it's processed quickly and securely.
     </p>
     <p>
       This system helps small business owners develop healthier financial habits, manage cash flow better, and keep business money separate from personal spending.
-      It’s a simple step that leads to long-term stability.
+      It's a simple step that leads to long-term stability.
     </p>
-    <img src="{{ url_for('static', filename='images/withdraw.png') }}" alt="Wallet withdrawal process" style="width:100%; border-radius:10px; margin-top:20px;">
+    <img loading="lazy" src="{{ url_for('static', filename='images/withdraw.webp') }}" alt="Wallet withdrawal process" class="guide-image">
   </section>
 </div>
 
@@ -141,7 +163,7 @@
 <section style="text-align: center; padding: 80px 20px;">
   <h2>Start Managing Smarter</h2>
   <p style="color: #333; font-size: 16px; margin-top: 10px;">
-    You’ve built something amazing — now let Inxource make it easier to grow, track, and understand it.
+    You've built something amazing — now let Inxource make it easier to grow, track, and understand it.
   </p>
   <button class="cta-btn"
     style="background: #000; color: #fff; padding: 15px 40px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; margin-top: 25px;"

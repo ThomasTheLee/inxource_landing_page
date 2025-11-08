@@ -189,7 +189,7 @@
 
   /* Add logo wallpaper */
   .logo-bg {
-    background: url('{{ url_for("static", filename="images/inxource logo.jpg") }}') center/contain no-repeat;
+    background: url('{{ url_for("static", filename="images/inxource logo.webp") }}') center/contain no-repeat;
     opacity: 0.15;
     position: absolute;
     inset: 0;
@@ -356,13 +356,39 @@
   .closing h2{font-size:2rem;margin-bottom:16px}
   .closing p{color:#333;max-width:720px;margin:0 auto 26px;font-size:1.08rem;line-height:1.7}
 
-  /* Floating CTA */
+  /* Floating CTA - aligned with User Guide button */
   .floating-cta{
-    position:fixed; right:22px; bottom:22px; padding:12px 18px; border-radius:999px;
-    background:var(--inx-red); color:#fff; text-decoration:none; font-weight:800;
-    box-shadow:0 3px 12px rgba(234,27,44,.2); transition:transform .15s ease, background .2s ease; z-index:60;
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    padding:16px 28px;
+    border-radius:50px;
+    background:var(--inx-red);
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    font-size: 15px;
+    box-shadow:0 8px 24px rgba(234,27,44,.4);
+    transition:all .3s ease;
+    z-index:60;
+    display: flex;
+    align-items: center;
   }
-  .floating-cta:hover{background:var(--ink-red-dark);transform:translateY(-2px)}
+  .floating-cta:hover{
+    background:var(--ink-red-dark);
+    transform:translateY(-3px);
+    box-shadow: 0 12px 32px rgba(234, 27, 44, 0.5);
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px){
+    .floating-cta{
+      right:20px;
+      bottom:20px;
+      padding:14px 22px;
+      font-size:14rem;
+    }
+  }
 
   /* Mobile Responsive */
   @media (max-width: 768px){
@@ -484,12 +510,12 @@
     <!-- FAST carousel using your previous images -->
     <div class="hero-carousel" aria-label="Business examples">
       <div class="track">
-        <img src="{{ url_for('static', filename='images/woman_bakery.png') }}" alt="Bakery owner" />
-        <img src="{{ url_for('static', filename='images/shoe store.png') }}" alt="Shoe store owner" />
-        <img src="{{ url_for('static', filename='images/flower girl.png') }}" alt="Flower seller" />
-        <img src="{{ url_for('static', filename='images/cake couple.png') }}" alt="Cake order" />
-        <img src="{{ url_for('static', filename='images/barber saloon.png') }}" alt="Barber & salon" />
-        <img src="{{ url_for('static', filename='images/chitenges.png') }}" alt="Clothing shop" />
+        <img src="{{ url_for('static', filename='images/woman_bakery.webp') }}" alt="Bakery owner" />
+        <img src="{{ url_for('static', filename='images/shoe store.webp') }}" alt="Shoe store owner" />
+        <img loading="lazy" src="{{ url_for('static', filename='images/flower girl.webp') }}" alt="Flower seller" />
+        <img loading="lazy" src="{{ url_for('static', filename='images/cake couple.webp') }}" alt="Cake order" />
+        <img loading="lazy" src="{{ url_for('static', filename='images/barber saloon.webp') }}" alt="Barber & salon" />
+        <img loading="lazy" src="{{ url_for('static', filename='images/chitenges.webp') }}" alt="Clothing shop" />
       </div>
     </div>
   </div>
@@ -512,19 +538,19 @@
   </div>
   <div class="rotating-tiles">
     <div class="tile active">
-      <img src="{{ url_for('static', filename='images/pos.png') }}" alt="Digital POS system" />
+      <img src="{{ url_for('static', filename='images/pos.webp') }}" alt="Digital POS system" />
       <h4>Record Every Sale Digitally</h4>
       <p>Run your own built-in POS right from your phone — simple, fast, and made for your business.</p>
     </div>
 
     <div class="tile">
-      <img src="{{ url_for('static', filename='images/order link.png') }}" alt="Online store creation" />
+      <img loading="lazy" src="{{ url_for('static', filename='images/order link.webp') }}" alt="Online store creation" />
       <h4>Create Your Own Online Store</h4>
       <p>Share your personalized order link and let customers buy your products or services anytime, from anywhere.</p>
     </div>
 
     <div class="tile">
-      <img src="{{ url_for('static', filename='images/lenny.png') }}" alt="AI business assistant Lenny" />
+      <img src="{{ url_for('static', filename='images/lenny.webp') }}" alt="AI business assistant Lenny" />
       <h4>Just Ask Lenny</h4>
       <p>No time to dig through numbers? Simply ask Lenny — your AI assistant that explains your business in seconds.</p>
     </div>
@@ -537,7 +563,7 @@
     <!-- Left Side: Big Business Problem -->
     <div class="comparison-side">
       <div class="visual">
-        <img src="{{ url_for('static', filename='images/big_business.png') }}" alt="Big company systems" />
+        <img loading="lazy" src="{{ url_for('static', filename='images/big_business.webp') }}" alt="Big company systems" />
       </div>
       <div class="text-compact">
         <h3>Big Companies Have It Easy</h3>
@@ -552,7 +578,7 @@
     <!-- Right Side: Inxource Solution -->
     <div class="comparison-side">
       <div class="visual">
-        <img src="{{ url_for('static', filename='images/analytics.png') }}" alt="Mobile analytics" />
+        <img loading="lazy" src="{{ url_for('static', filename='images/analytics.webp') }}" alt="Mobile analytics" />
       </div>
       <div class="text-compact">
         <h3>You Get It All in Your Hands</h3>
