@@ -1,82 +1,201 @@
 {% extends "base.html" %}
 
-{% block title %}Inxource Enterprise - Total Data Clarity{% endblock %}
+{% block title %}Inxource – Enterprise Solutions{% endblock %}
+
+{% block extra_css %}
+<style>
+/* ===== Enterprise Page Custom Styles ===== */
+
+/* Hero split layout */
+.enterprise-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.enterprise-text {
+    flex: 1;
+    min-width: 320px;
+}
+
+.enterprise-text h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.enterprise-text p {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: #444;
+}
+
+.enterprise-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.enterprise-image img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Section styling reused */
+.enterprise-section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.enterprise-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 18px;
+}
+
+.enterprise-section p {
+    font-size: 1.07rem;
+    line-height: 1.65;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .enterprise-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+        gap: 30px;
+    }
+
+    .enterprise-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .enterprise-image img {
+        max-width: 90%;
+    }
+
+    .enterprise-section {
+        padding: 50px 5%;
+    }
+
+    .enterprise-section h2 {
+        font-size: 1.6rem;
+    }
+}
+</style>
+{% endblock %}
 
 {% block content %}
 
-<section id="intro" class="hero" style="align-items: center; gap: 40px;">
-  <div class="hero-content">
+<section id="intro" class="enterprise-hero">
+  <div class="enterprise-text">
     <h1>At Scale, Complexity Becomes the Enemy</h1>
     <p>
-      Large organizations move fast — but their data often doesn’t. Information gets trapped in silos, reports arrive too late, and leaders make decisions without the full picture. That’s where <strong>Inxource Enterprise</strong> comes in. We connect, clean, and centralize your data — giving you a live, panoramic view of your business on one intelligent screen.
+      Large organizations move fast — but their data often doesn’t.
+      Information gets trapped in silos, reports arrive too late,
+      and leaders make decisions without the full picture. That’s
+      where <strong>Inxource Enterprise</strong> comes in. We connect,
+      clean, and centralize your data — giving you a live, panoramic
+      view of your business on one intelligent screen.
     </p>
   </div>
-  <div class="hero-image">
-    <img src="{{ url_for('static', filename='images/pipeline.webp') }}" alt="A modern enterprise dashboard showing connected data from multiple departments">
+  <div class="enterprise-image">
+    <img src="{{ url_for('static', filename='images/pipeline.webp') }}"
+         alt="Enterprise data dashboard">
   </div>
 </section>
 
-<section id="problem" style="margin-top: 80px;">
+<section id="problem" class="enterprise-section">
   <h2>The Challenge of Scale</h2>
   <p>
-    The bigger a business grows, the harder it becomes to see it clearly. Sales data lives in one system, inventory in another, finance somewhere else, and operations somewhere in between. Teams work hard, but insights are delayed. Problems grow quietly — until they’re too big to ignore.
+    The bigger a business grows, the harder it becomes to see it clearly.
+    Sales data lives in one system, inventory in another, finance somewhere else,
+    and operations somewhere in between. Teams work hard, but insights are delayed.
+    Problems grow quietly — until they’re too big to ignore.
   </p>
   <p>
-    Every decision-maker knows the frustration: endless spreadsheets, disconnected dashboards, inconsistent metrics. You know something’s wrong, but not where to look first. Data is supposed to bring clarity, not chaos.
+    Every decision-maker knows the frustration: endless spreadsheets, disconnected
+    dashboards, inconsistent metrics. You know something’s wrong, but not where to look first.
+    Data is supposed to bring clarity, not chaos.
   </p>
 </section>
 
-<section id="solution" style="margin-top: 80px;">
+<section id="solution" class="enterprise-section">
   <h2>One Connected Pipeline. One Clear View.</h2>
   <p>
-    Inxource builds intelligent data pipelines that connect your entire business — from finance to logistics, HR to operations — into a single, unified ecosystem. We don’t just integrate systems; we create structure, flow, and foresight.
+    Inxource builds intelligent data pipelines that connect your entire business —
+    from finance to logistics, HR to operations — into a single, unified ecosystem.
+    We don’t just integrate systems; we create structure, flow, and foresight.
   </p>
   <p>
-    Every department becomes visible in real time. Our advanced data mapping tools clean, organize, and visualize your information in a way that makes sense. You can monitor KPIs, forecast trends, and pinpoint inefficiencies before they turn into losses — all on one dashboard.
+    Every department becomes visible in real time. Our advanced data mapping tools
+    clean, organize, and visualize your information in a way that makes sense.
+    You can monitor KPIs, forecast trends, and pinpoint inefficiencies before they turn into losses.
+    All on one dashboard.
   </p>
-  <p>
-    Whether you manage a nationwide retail chain, a manufacturing operation, or a financial institution, Inxource provides the intelligence to see your business exactly as it is — connected, precise, and alive.
-  </p>
-  <div class="hero-image">
-    <img src="{{ url_for('static', filename='images/software_pipeline.webp') }}" alt="Illustration showing a seamless data pipeline connecting multiple enterprise systems">
+  <div class="enterprise-image">
+    <img src="{{ url_for('static', filename='images/software_pipeline.webp') }}"
+         alt="Illustration showing a seamless data pipeline">
   </div>
 </section>
 
-<section id="philosophy" style="margin-top: 80px;">
+<section id="philosophy" class="enterprise-section">
   <h2>An Easier Way — Our Philosophy</h2>
   <p>
-    At Inxource, simplicity is our highest form of innovation. We believe that data should empower, not overwhelm. That’s why our mission — and our motto — is simple: <strong>“An easier way.”</strong>
+    At Inxource, simplicity is our highest form of innovation. We believe that data
+    should empower, not overwhelm. That’s why our mission — and our motto — is simple:
+    <strong>“An easier way.”</strong>
   </p>
   <p>
-    We design enterprise systems that don’t just deliver data but deliver understanding. Dashboards that anticipate your questions before you ask. Analytics that highlight patterns before they become problems. Reports that explain themselves, in plain language.
+    We design enterprise systems that don’t just deliver data but deliver understanding.
+    Dashboards that anticipate your questions before you ask. Analytics that highlight
+    patterns before they become problems. Reports that explain themselves, in plain language.
   </p>
   <p>
     Because real intelligence isn’t about more data — it’s about clearer insight.
   </p>
 </section>
 
-<section id="impact" style="margin-top: 80px;">
+<section id="impact" class="enterprise-section">
   <h2>Seeing Before It Happens</h2>
   <p>
-    Our clients use Inxource to transform the way they operate. From spotting sales dips before quarterly reports, to predicting inventory shortages weeks in advance — the advantage lies in anticipation.
+    Our clients use Inxource to transform the way they operate. From spotting sales dips
+    before quarterly reports, to predicting inventory shortages weeks in advance — the advantage
+    lies in anticipation.
   </p>
   <p>
-    With our advanced data infrastructure and predictive analytics, leaders can act, not react. You’ll know what’s slowing performance, what’s driving growth, and what’s quietly draining resources — all before it reaches the boardroom.
+    With our advanced data infrastructure and predictive analytics, leaders can act, not react.
+    You’ll know what’s slowing performance, what’s driving growth, and what’s quietly draining
+    resources — all before it reaches the boardroom.
   </p>
 </section>
 
-<section id="cta" style="padding: 80px 20px; text-align: center;">
+<section id="cta" class="enterprise-section" style="text-align: center; padding: 100px 5% 120px 5%;">
   <div class="container">
     <h2>Design a Smarter Data Ecosystem</h2>
-    <p style="margin-top: 20px; font-size: 16px; color: #333; max-width: 700px; margin-left: auto; margin-right: auto;">
+    <p style="margin-top: 20px; font-size: 1.05rem; color: #333; max-width: 700px; margin-left: auto; margin-right: auto;">
       Let’s build the system that helps you see everything — clearly, intelligently, and in real time.
     </p>
-    <button class="cta-submit" onclick="window.open('{{ whatsapp_link }}', '_blank')"
-      style="background: #000; color: #fff; border: none; padding: 15px 40px; font-size: 18px; border-radius: 6px; cursor: pointer; margin-top: 30px;">
+    <button class="cta-submit"
+            onclick="window.open('{{ whatsapp_link }}', '_blank')"
+            style="background: #000; color: #fff; border: none; padding: 15px 40px; font-size: 18px; border-radius: 6px; cursor: pointer; margin-top: 30px;">
       Talk to Our Enterprise Team
     </button>
   </div>
 </section>
-
 
 {% endblock %}
