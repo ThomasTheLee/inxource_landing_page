@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Inxource - Turn Data into your fastest competitive advantage{% endblock %}</title>
-
-
     <style>
     * {
         margin: 0;
@@ -105,102 +103,168 @@
         border-radius: 6px;
         text-decoration: none;
         font-size: 14px;
-        font-weight: 600; /* ← Add this */
+        font-weight: 600;
     }
 
-/* TOP NAV TABS NEXT TO LOGO */
-.top-tabs {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-left: 20px;
-}
+    /* TOP NAV TABS NEXT TO LOGO */
+    .top-tabs {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-left: 20px;
+    }
 
-.top-tab {
-    font-size: 15px;
-    font-weight: 500;
-    color: #111;
-    text-decoration: none;
-    padding: 6px 4px;
-    transition: color 0.25s ease;
-}
+    .top-tab {
+        font-size: 15px;
+        font-weight: 500;
+        color: #111;
+        text-decoration: none;
+        padding: 6px 4px;
+        transition: color 0.25s ease;
+    }
 
-.top-tab:hover {
-    color: #EA1B2C;
-}
+    .top-tab:hover {
+        color: #EA1B2C;
+    }
 
-.top-tab.active {
-    color: #EA1B2C; /* Active tab turns red */
-}
+    .top-tab.active {
+        color: #EA1B2C;
+    }
 
-/* Vertical separator between tabs */
-.separator {
-    width: 1px;
-    height: 18px;
-    background: #ddd;
-    display: inline-block;
-}
+    /* Vertical separator between tabs */
+    .separator {
+        width: 1px;
+        height: 18px;
+        background: #ddd;
+        display: inline-block;
+    }
 
+    .logo-img {
+        height: 50px;
+        width: auto;
+        display: block;
+    }
 
-.logo-img {
-    height: 50px;
-    width: auto;
-    display: block;
-}
-
-/* LEFT SIDE: logo + tabs */
-.left-nav {
-    display: flex;
-    align-items: center;
-    gap: 25px; /* spacing between logo and tabs */
-}
-
-/* Tabs next to logo */
-.top-tabs {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-/* Style of tabs "For SMEs" / "For Enterprises" */
-.top-tab {
-    font-size: 15px;
-    font-weight: 500;
-    color: #111;
-    text-decoration: none;
-    padding: 6px 4px;
-    transition: color 0.25s ease;
-}
-
-.top-tab:hover {
-    color: #EA1B2C;
-}
-
-.top-tab.active {
-    color: #EA1B2C; /* highlight active tab in red */
-}
-
-/* Separator AFTER enterprise tab */
-.separator {
-    width: 1px;
-    height: 20px;
-    background: #ccc;
-    display: inline-block;
-}
-
-/* Adjust logo size without increasing navbar height */
-.logo-img {
-    height: 90px;
-    width: auto;
-    display: block;
-}
-
+    /* LEFT SIDE: logo + tabs */
+    .left-nav {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
 
     /* --- FIXED LOGIN TEXT COLOR --- */
     .nav-links li a.login-btn {
         color: #fff !important;
     }
 
+    /* Footer CTA Button Styling */
+    .cta-submit {
+        background: #fff !important;
+        color: #000 !important;
+        border: 2px solid #fff !important;
+        transition: all 0.3s ease;
+    }
+
+    .cta-submit:hover {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        body {
+            padding-top: 60px;
+        }
+
+        .sticky-header {
+            padding: 0 10px;
+        }
+
+        .container {
+            padding: 0 10px;
+        }
+
+        nav {
+            padding: 8px 0;
+            gap: 0;
+        }
+
+        .left-nav {
+            gap: 0;
+            margin-left: 0;
+        }
+
+        .logo-img {
+            display: none;
+        }
+
+        .top-tabs {
+            margin-left: 0;
+            gap: 4px;
+        }
+
+        .top-tab {
+            font-size: 9px;
+            padding: 3px 2px;
+            white-space: nowrap;
+        }
+
+        .separator {
+            height: 10px;
+            margin: 0 2px;
+        }
+
+        .nav-links {
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .nav-links li:first-child {
+            display: none;
+        }
+
+        .nav-links a {
+            font-size: 9px;
+        }
+
+        .login-btn {
+            padding: 5px 10px !important;
+            font-size: 9px !important;
+            border-radius: 4px !important;
+            background: #000 !important;
+            color: #fff !important;
+            display: inline-block !important;
+        }
+
+        /* Force login button visibility on mobile */
+        .nav-links li a.login-btn {
+            color: #fff !important;
+            background-color: #000 !important;
+        }
+
+        /* Footer CTA Section */
+        .cta-section {
+            padding: 40px 15px !important;
+        }
+
+        .cta-section h2 {
+            font-size: 1rem !important;
+            line-height: 1.4 !important;
+            padding: 0 10px;
+        }
+
+        .cta-section .cta-form {
+            margin-top: 15px !important;
+        }
+
+        .cta-section .cta-submit {
+            padding: 10px 20px !important;
+            font-size: 12px !important;
+            border-radius: 6px !important;
+            background: #fff !important;
+            color: #000 !important;
+        }
+    }
 </style>
 {% block extra_css %}{% endblock %}
     <link rel="preload" as="image" href="{{ url_for('static', filename='images/woman_bakery.webp') }}">
