@@ -174,8 +174,6 @@
     @media (max-width: 768px) {
         body {
             padding-top: 60px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         .sticky-header {
@@ -184,18 +182,20 @@
 
         .container {
             padding: 0 10px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         nav {
             padding: 8px 0;
-            gap: 0;
+            gap: 12px;
+            width: 100%;
         }
 
         .left-nav {
             gap: 0;
             margin-left: 0;
+            flex: 1;
+            min-width: 0;
+            justify-content: center;
         }
 
         .logo-img {
@@ -203,8 +203,10 @@
         }
 
         .top-tabs {
-            margin-left: 0;
+            margin-left: 16px;
             gap: 4px;
+            flex: 1;
+            min-width: 0;
         }
 
         .top-tab {
@@ -232,25 +234,19 @@
         }
 
         .login-btn {
-            padding: 5px 10px !important;
+            padding: 5px 6px !important;
             font-size: 9px !important;
             border-radius: 4px !important;
             background: #000 !important;
             color: #fff !important;
             display: inline-block !important;
+            white-space: nowrap !important;
         }
 
         /* Force login button visibility on mobile */
         .nav-links li a.login-btn {
             color: #fff !important;
             background-color: #000 !important;
-            display: inline-block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-        }
-
-        .nav-links li:last-child {
-            display: block !important;
         }
 
         /* Footer CTA Section */
@@ -259,11 +255,9 @@
         }
 
         .cta-section h2 {
-            font-size: 0.85rem !important;
+            font-size: 1rem !important;
             line-height: 1.4 !important;
             padding: 0 10px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         .cta-section .cta-form {
@@ -278,25 +272,6 @@
             color: #000 !important;
         }
     }
-
-        /* Desktop/Mobile text visibility */
-.desktop-text {
-    display: block;
-}
-
-.mobile-text {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .desktop-text {
-        display: none;
-    }
-
-    .mobile-text {
-        display: block;
-    }
-}
 </style>
 {% block extra_css %}{% endblock %}
     <link rel="preload" as="image" href="{{ url_for('static', filename='images/woman_bakery.webp') }}">
